@@ -540,7 +540,7 @@ class List_Table extends \WP_List_Table {
 	function filters_form() {
 		$user_id = get_current_user_id();
 		$filters = $this->get_filters();
-
+		
 		$filters_string  = sprintf( '<input type="hidden" name="page" value="%s" />', 'wp_stream' );
 		$filters_string .= sprintf( '<span class="filter_info hidden">%s</span>', esc_html__( 'Show filter controls via the screen options tab above.', 'stream' ) );
 
@@ -773,6 +773,28 @@ class List_Table extends \WP_List_Table {
 
 	function display() {
 		$url = self_admin_url( $this->plugin->admin->admin_parent_page );
+		if(isset($_GET['date_from']))
+			{$fecha_ini=$_GET['date_from'];}
+		if(isset($_GET['date_to']))
+			{$fecha_fin=$_GET['date_to'];}
+		if(isset($_GET['user_id']))
+			{$user_id=$_GET['user_id'];}
+		if(isset($_GET['connector']))
+			{$connector=$_GET['connector'];}
+		if(isset($_GET['action']))
+			{$action=$_GET['action'];}
+		echo '<p>	
+			<form method="post" action="admin.php?page=ReporteBitacora" target="_blank">
+			<input type="submit" class="button-primary" name="Exportar" value="Exportar" />
+			<input name="formato" type="radio" value="pdf" checked>PDF
+    		<input name="formato" type="radio" value="xls">XLS
+				<input name="fecha_ini" type="hidden" value="'.$fecha_ini.'">
+				<input name="fecha_fin" type="hidden" value="'.$fecha_fin.'">
+				<input name="user_id" 	type="hidden" value="'.$user_id.'">
+				<input name="connector" type="hidden" value="'.$connector.'">
+				<input name="action" 	type="hidden" value="'.$action.'">
+			</form>
+			</p>';
 
 		echo '<form method="get" action="' . esc_url( $url ) . '" id="record-filter-form">';
 		echo $this->filter_search(); // xss ok
