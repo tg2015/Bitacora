@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"path": "/var/www/wordpress/wp-content/plugins/stream"
+		}
+	],
+"settings": {
+        "xdebug": {
+             "url": "http://172.16.0.103/wordpress/wp-admin/admin.php?page=wp_stream"
+        }
+    }
+}

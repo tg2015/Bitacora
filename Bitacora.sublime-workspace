@@ -1,0 +1,1743 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"j",
+				"jqxhr"
+			],
+			[
+				"post",
+				"post_ID"
+			],
+			[
+				"sp_hola_mun",
+				"sp_hola_mundo_border_color"
+			],
+			[
+				"IN",
+				"input	Tag"
+			],
+			[
+				"TD",
+				"td	Tag"
+			],
+			[
+				"in",
+				"input	Tag"
+			],
+			[
+				"f",
+				"form	Tag"
+			],
+			[
+				"LI",
+				"li	Tag"
+			],
+			[
+				"I",
+				"i	Tag"
+			],
+			[
+				"DI",
+				"div	Tag"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"print",
+				"printf"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "classes/class-query.php",
+			"settings":
+			{
+				"buffer_size": 9399,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "classes/class-admin.php",
+			"settings":
+			{
+				"buffer_size": 29530,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "classes/class-list-table.php",
+			"settings":
+			{
+				"buffer_size": 27479,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "classes/class-date-interval.php",
+			"settings":
+			{
+				"buffer_size": 3630,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "includes/lib/Carbon.php",
+			"settings":
+			{
+				"buffer_size": 54639,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "Searching 191 files for \"$out\"\n\n/var/www/wordpress/wp-content/plugins/stream/classes/class-cli.php:\n  198  	 */\n  199  	private function csv_format( $array ) {\n  200: 		$output = fopen( 'php://output', 'w' );\n  201  \n  202  		foreach ( $array as $line ) {\n  203: 			fputcsv( $output, $line );\n  204  		}\n  205  \n  206: 		fclose( $output );\n  207  	}\n  208  \n\n/var/www/wordpress/wp-content/plugins/stream/classes/class-db.php:\n  184  \n  185  		if ( is_array( $rows ) && ! empty( $rows ) ) {\n  186: 			$output_array = array();\n  187  \n  188  			foreach ( $rows as $row ) {\n  189  				foreach ( $row as $cell => $value ) {\n  190: 					$output_array[ $value ] = $value;\n  191  				}\n  192  			}\n  193  \n  194: 			return (array) $output_array;\n  195  		}\n  196  \n\n/var/www/wordpress/wp-content/plugins/stream/classes/class-list-table.php:\n  220  \n  221  	function column_default( $item, $column_name ) {\n  222: 		$out = '';\n  223  		$record = new Record( $item );\n  224  \n  ...\n  231  					get_date_from_gmt( $created, 'Y-m-d' )\n  232  				);\n  233: 				$out  = $this->column_link( $date_string, 'date', get_date_from_gmt( $created, 'd-m-Y' ) );\n  234: 				$out .= '<br />';\n  235: 				$out .= get_date_from_gmt( $created, 'h:i:s A' );\n  236  				break;\n  237  \n  238  			case 'summary' :\n  239: 				$out           = $record->summary;\n  240  				$object_title  = $record->get_object_title();\n  241  				$view_all_text = $object_title ? sprintf( esc_html__( 'Ver la actividad de  \"%s\"', 'stream' ), esc_attr( $object_title ) ) : esc_html__( 'Ver la actividad realizada', 'stream' );\n  242  \n  243  				if ( $record->object_id ) {\n  244: 					$out .= $this->column_link(\n  245  						'<span class=\"dashicons dashicons-search stream-filter-object-id\"></span>',\n  246  						array(\n  ...\n  252  					);\n  253  				}\n  254: 				$out .= $this->get_action_links( $record );\n  255  				break;\n  256  \n  ...\n  258  				$user = new Author( (int) $record->user_id, (array) maybe_unserialize( $record->user_meta ) );\n  259  \n  260: 				$out = sprintf(\n  261  					'<a href=\"%s\">%s <span>%s</span></a>%s%s%s',\n  262  					$user->get_records_page_url(),\n  ...\n  273  				$context_title   = $this->get_term_title( $record->{'context'}, 'context' );\n  274  \n  275: 				$out  = $this->column_link( $connector_title, 'connector', $item->{'connector'} );\n  276: 				$out .= '<br />&#8627;&nbsp;';\n  277: 				$out .= $this->column_link(\n  278  					$context_title,\n  279  					array(\n  ...\n  285  \n  286  			case 'action':\n  287: 				$out = $this->column_link( $this->get_term_title( $record->{$column_name}, $column_name ), $column_name, $record->{$column_name} );\n  288  				break;\n  289  \n  290  			case 'blog_id':\n  291  				$blog = ( $record->blog_id && is_multisite() ) ? get_blog_details( $record->blog_id ) : $this->plugin->admin->network->get_network_blog();\n  292: 				$out  = $this->column_link( $blog->blogname, 'blog_id', $blog->blog_id );\n  293  				break;\n  294  \n  295  			case 'ip' :\n  296: 				$out = $this->column_link( $record->{$column_name}, 'ip', $record->{$column_name} );\n  297  				break;\n  298  \n  ...\n  324  							 * @return string\n  325  							 */\n  326: 							$out = apply_filters( \"wp_stream_insert_column_default-{$column_title}\", $column_name, $record );\n  327  						} else {\n  328: 							$out = $column_name;\n  329  						}\n  330  					}\n  331  				} else {\n  332: 					$out = $column_name;\n  333  				}\n  334  		}\n  335  \n  336: 		echo $out; // xss ok\n  337  	}\n  338  \n  339  	public function get_action_links( $record ) {\n  340: 		$out = '';\n  341  \n  342  		/**\n  ...\n  361  \n  362  		if ( $action_links || $custom_links ) {\n  363: 			$out .= '<div class=\"row-actions\">';\n  364  		}\n  365  \n  ...\n  381  		}\n  382  \n  383: 		$out .= implode( ' | ', $links );\n  384  \n  385  		if ( $action_links || $custom_links ) {\n  386: 			$out .= '</div>';\n  387  		}\n  388  \n  389: 		return $out;\n  390  	}\n  391  \n  ...\n  625  	function filter_select( $name, $title, $items, $ajax = false ) {\n  626  		if ( $ajax ) {\n  627: 			$out = sprintf(\n  628  				'<input type=\"hidden\" name=\"%s\" class=\"chosen-select\" value=\"%s\" data-placeholder=\"%s\" />',\n  629  				esc_attr( $name ),\n  ...\n  665  				}\n  666  			}\n  667: 			$out = sprintf(\n  668  				'<select name=\"%s\" class=\"chosen-select\" data-placeholder=\"%s\">%s</select>',\n  669  				esc_attr( $name ),\n  ...\n  673  		}\n  674  \n  675: 		return $out;\n  676  	}\n  677  \n  ...\n  708  			$search = esc_attr( wp_unslash( $_GET['search'] ) ); // input var okay\n  709  		}\n  710: 		$out = sprintf(\n  711  			'<p class=\"search-box\">\n  712  				<label class=\"screen-reader-text\" for=\"record-search-input\">%1$s:</label>\n  ...\n  718  		);\n  719  \n  720: 		return $out;\n  721  	}\n  722  \n  ...\n  883  		switch ( $column ) {\n  884  			case 'connector':\n  885: 				$output = 'connectors';\n  886  				break;\n  887  			case 'context':\n  888: 				$output = 'contexts';\n  889  				break;\n  890  			case 'action':\n  891: 				$output = 'action';\n  892  				break;\n  893  			case 'ip':\n  894: 				$output = 'ip_addresses';\n  895  				break;\n  896  			case 'user_id':\n  897: 				$output = 'users';\n  898  				break;\n  899  			default:\n  900: 				$output = false;\n  901  		}\n  902  \n  903: 		return $output;\n  904  	}\n  905  \n\n/var/www/wordpress/wp-content/plugins/stream/classes/class-log.php:\n  269  		$backtrace = array_values( array_filter( explode( \"\\n\", $backtrace ) ) );\n  270  \n  271: 		$output = sprintf(\n  272  			\"WP Stream Debug Backtrace\\n\\n    Summary | %s\\n     Author | %s\\n  Connector | %s\\n    Context | %s\\n     Action | %s\\nStream Meta | %s\\nAuthor Meta | %s\\n\\n%s\\n\",\n  273  			$summary,\n  ...\n  281  		);\n  282  \n  283: 		error_log( $output );\n  284  	}\n  285  }\n\n/var/www/wordpress/wp-content/plugins/stream/classes/class-record.php:\n   95  		}\n   96  \n   97: 		$output = false;\n   98  \n   99  		if ( isset( $this->meta->post_title ) && ! empty( $this->meta->post_title ) ) {\n  100: 			$output = (string) $this->meta->post_title;\n  101  		} elseif ( isset( $this->meta->display_name ) && ! empty( $this->meta->display_name ) ) {\n  102: 			$output = (string) $this->meta->display_name;\n  103  		} elseif ( isset( $this->meta->name ) && ! empty( $this->meta->name ) ) {\n  104: 			$output = (string) $this->meta->name;\n  105  		}\n  106  \n  107: 		return $output;\n  108  	}\n  109  }\n\n/var/www/wordpress/wp-content/plugins/stream/classes/class-settings.php:\n  443  	 */\n  444  	public function sanitize_settings( $input ) {\n  445: 		$output   = array();\n  446  		$sections = $this->get_fields();\n  447  \n  ...\n  462  				switch ( $type ) {\n  463  					case 'number':\n  464: 						$output[ $name ] = is_numeric( $input[ $name ] ) ? intval( trim( $input[ $name ] ) ) : '';\n  465  						break;\n  466  					case 'checkbox':\n  467: 						$output[ $name ] = is_numeric( $input[ $name ] ) ? absint( trim( $input[ $name ] ) ) : '';\n  468  						break;\n  469  					default:\n  470  						if ( is_array( $input[ $name ] ) ) {\n  471: 							$output[ $name ] = $input[ $name ];\n  472  \n  473  							// Support all values in multidimentional arrays too\n  474: 							array_walk_recursive( $output[ $name ], function( &$v, $k ) {\n  475  								$v = trim( $v );\n  476  							} );\n  477  						} else {\n  478: 							$output[ $name ] = trim( $input[ $name ] );\n  479  						}\n  480  				}\n  ...\n  482  		}\n  483  \n  484: 		return $output;\n  485  	}\n  486  \n  ...\n  493  	 */\n  494  	public function render_field( $field ) {\n  495: 		$output      = null;\n  496  		$type        = isset( $field['type'] ) ? $field['type'] : null;\n  497  		$section     = isset( $field['section'] ) ? $field['section'] : null;\n  ...\n  540  			case 'text':\n  541  			case 'number':\n  542: 				$output = sprintf(\n  543  					'<input type=\"%1$s\" name=\"%2$s[%3$s_%4$s]\" id=\"%2$s_%3$s_%4$s\" class=\"%5$s\" placeholder=\"%6$s\" min=\"%7$d\" max=\"%8$d\" step=\"%9$d\" value=\"%10$s\" /> %11$s',\n  544  					esc_attr( $type ),\n  ...\n  556  				break;\n  557  			case 'textarea':\n  558: 				$output = sprintf(\n  559  					'<textarea name=\"%1$s[%2$s_%3$s]\" id=\"%1$s_%2$s_%3$s\" class=\"%4$s\" placeholder=\"%5$s\" rows=\"%6$d\" cols=\"%7$d\">%8$s</textarea> %9$s',\n  560  					esc_attr( $option_key ),\n  ...\n  570  				break;\n  571  			case 'checkbox':\n  572: 				$output = sprintf(\n  573  					'<label><input type=\"checkbox\" name=\"%1$s[%2$s_%3$s]\" id=\"%1$s[%2$s_%3$s]\" value=\"1\" %4$s /> %5$s</label>',\n  574  					esc_attr( $option_key ),\n  ...\n  580  				break;\n  581  			case 'multi_checkbox':\n  582: 				$output = sprintf(\n  583  					'<div id=\"%1$s[%2$s_%3$s]\"><fieldset>',\n  584  					esc_attr( $option_key ),\n  ...\n  587  				);\n  588  				// Fallback if nothing is selected\n  589: 				$output .= sprintf(\n  590  					'<input type=\"hidden\" name=\"%1$s[%2$s_%3$s][]\" value=\"__placeholder__\" />',\n  591  					esc_attr( $option_key ),\n  ...\n  599  				}\n  600  				foreach ( $choices as $value => $label ) {\n  601: 					$output .= sprintf(\n  602  						'<label>%1$s <span>%2$s</span></label><br />',\n  603  						sprintf(\n  ...\n  612  					);\n  613  				}\n  614: 				$output .= '</fieldset></div>';\n  615  				break;\n  616  			case 'select':\n  ...\n  619  				$default_name  = isset( $default['name'] ) ? $default['name'] : 'Choose Setting';\n  620  \n  621: 				$output  = sprintf(\n  622  					'<select name=\"%1$s[%2$s_%3$s]\" class=\"%1$s_%2$s_%3$s\">',\n  623  					esc_attr( $option_key ),\n  ...\n  625  					esc_attr( $name )\n  626  				);\n  627: 				$output .= sprintf(\n  628  					'<option value=\"%1$s\" %2$s>%3$s</option>',\n  629  					esc_attr( $default_value ),\n  ...\n  632  				);\n  633  				foreach ( $field['choices'] as $value => $label ) {\n  634: 					$output .= sprintf(\n  635  						'<option value=\"%1$s\" %2$s>%3$s</option>',\n  636  						esc_attr( $value ),\n  ...\n  639  					);\n  640  				}\n  641: 				$output .= '</select>';\n  642  				break;\n  643  			case 'file':\n  644: 				$output = sprintf(\n  645  					'<input type=\"file\" name=\"%1$s[%2$s_%3$s]\" class=\"%4$s\">',\n  646  					esc_attr( $option_key ),\n  ...\n  651  				break;\n  652  			case 'link':\n  653: 				$output = sprintf(\n  654  					'<a id=\"%1$s_%2$s_%3$s\" class=\"%4$s\" href=\"%5$s\">%6$s</a>',\n  655  					esc_attr( $option_key ),\n  ...\n  704  				);\n  705  \n  706: 				$output = sprintf(\n  707  					'<div class=\"%1$s_%2$s_%3$s\">%4$s</div>',\n  708  					esc_attr( $option_key ),\n  ...\n  714  				break;\n  715  			case 'rule_list' :\n  716: 				$output = '<p class=\"description\">' . esc_html( $description ) . '</p>';\n  717  \n  718  				$actions_top    = sprintf( '<input type=\"button\" class=\"button\" id=\"%1$s_new_rule\" value=\"&#43; %2$s\" />', esc_attr( $section . '_' . $name ),  esc_html__( 'Add New Rule', 'stream' ) );\n  719  				$actions_bottom = sprintf( '<input type=\"button\" class=\"button\" id=\"%1$s_remove_rules\" value=\"%2$s\" />', esc_attr( $section . '_' . $name ),  esc_html__( 'Delete Selected Rules', 'stream' ) );\n  720  \n  721: 				$output .= sprintf( '<div class=\"tablenav top\">%1$s</div>', $actions_top );\n  722: 				$output .= '<table class=\"wp-list-table widefat fixed stream-exclude-list\">';\n  723  \n  724  				unset( $description );\n  ...\n  901  				);\n  902  \n  903: 				$output .= '<thead>' . $heading_row . '</thead>';\n  904: 				$output .= '<tfoot>' . $heading_row . '</tfoot>';\n  905: 				$output .= '<tbody>' . $no_rules_found_row . implode( '', $exclude_rows ) . '</tbody>';\n  906  \n  907: 				$output .= '</table>';\n  908  \n  909: 				$output .= sprintf( '<div class=\"tablenav bottom\">%1$s</div>', $actions_bottom );\n  910  \n  911  				break;\n  912  		}\n  913: 		$output .= ! empty( $description ) ? wp_kses_post( sprintf( '<p class=\"description\">%s</p>', $description ) ) : null;\n  914  \n  915: 		return $output;\n  916  	}\n  917  \n  ...\n  930  		}\n  931  \n  932: 		$output = $this->render_field( $field );\n  933  \n  934: 		echo $output; // xss ok\n  935  	}\n  936  \n\n/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-comments.php:\n  166  	 * @param string $field       What field you want to return\n  167  	 *\n  168: 	 * @return int|string $output User ID or user display name\n  169  	 */\n  170  	public function get_comment_author( $comment, $field = 'id' ) {\n  ...\n  177  		$user_name = esc_html__( 'Guest', 'stream' );\n  178  \n  179: 		$output = '';\n  180  \n  181  		if ( $req_name_email && isset( $comment->comment_author_email ) && isset( $comment->comment_author ) ) {\n  ...\n  192  \n  193  		if ( 'id' === $field ) {\n  194: 			$output = $user_id;\n  195  		} elseif ( 'name' === $field ) {\n  196: 			$output = $user_name;\n  197  		}\n  198  \n  199: 		return $output;\n  200  	}\n  201  \n\n/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-editor.php:\n  202  	 * @param string $slug The theme slug (e.g. twentyfourteen)\n  203  	 *\n  204: 	 * @return mixed $output Compacted variables\n  205  	 */\n  206  	public function get_theme_data( $slug ) {\n  ...\n  230  		$name = $theme->get( 'Name' );\n  231  \n  232: 		$output = compact(\n  233  			'file_name',\n  234  			'file_path',\n  ...\n  238  		);\n  239  \n  240: 		return $output;\n  241  	}\n  242  \n  ...\n  245  	 *\n  246  	 * @param  string $slug   The plugin file base name (e.g. akismet/akismet.php)\n  247: 	 * @return mixed  $output Compacted variables\n  248  	 */\n  249  	public function get_plugin_data( $slug ) {\n  ...\n  270  		$slug      = ! empty( $base ) ? $base : $slug;\n  271  \n  272: 		$output = compact(\n  273  			'file_name',\n  274  			'file_path',\n  ...\n  278  		);\n  279  \n  280: 		return $output;\n  281  	}\n  282  \n\n93 matches across 8 files\n",
+			"settings":
+			{
+				"buffer_size": 13532,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Context",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Watch",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Stack",
+				"read_only": true,
+				"scratch": true
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix",
+				"name": "Xdebug Breakpoint",
+				"read_only": true,
+				"scratch": true
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 360.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: li",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: lis",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: l",
+				"Package Control: List Packages"
+			],
+			[
+				"Package Control: a",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 539.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/var/www/wordpress/wp-content/plugins/stream/ui/js/admin.js",
+		"/var/www/wordpress/wp-content/plugins/stream/Bitacora.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/timeago/locales/jquery.timeago.es.js",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-query.php",
+		"/var/www/wordpress/wp-content/plugins/stream/untitled.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/stream/SIGOES-Bitacora.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/view/ReporteView.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/InstitucionController.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/GenerarReportes.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/OtrosController.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/ProyectoController.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/ReporteController.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-date-interval.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-list-table.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-admin.php",
+		"/home/gaboroja/Documentos/Gabriel-Doc-Debian/BackUp de Wordpress/SIGOES-Comunicados-04-11-2015-Bitacora/controller/EventoController.php",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/stream-icons/style.css",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/stream-icons/datepicker-icons.png",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/stream-icons/datepicker-icons-gray.png",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/stream-icons/font/stream.eot",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-taxonomies.php",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/js/global.js",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/Xdebug Context",
+		"/var/www/wordpress/wp-includes/wp-db.php",
+		"/var/www/wordpress/wp-content/plugins/stream/includes/lib/Carbon.php",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/css/admin.css",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-filter-input.php",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_el.js",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_es.js",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/css/datepicker.css",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-admin.php",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2.js",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/timeago/jquery.timeago.js",
+		"/var/www/wordpress/wp-content/plugins/stream/stream.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-install.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-db.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-live-update.php",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2.jquery.json",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/js/wpseo-admin.js",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/js/live-updates.js",
+		"/var/www/wordpress/wp-content/plugins/stream/includes/feeds/json.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-connectors.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-connector.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-cli.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-author.php",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/timeago/locales/jquery.timeago.ar.js",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_da.js",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_ca.js",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_bg.js",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2-bootstrap.css",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/release.sh",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/package.json",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/bower.json",
+		"/var/www/wordpress/wp-content/plugins/stream/readme.txt",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/component.json",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/README.md",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/LICENSE",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/CONTRIBUTING.md",
+		"/var/www/wordpress/wp-content/plugins/stream/ui/js/settings.js",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-date-interval.php",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/testcase.php",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/bootstrap.php",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-plugin.php",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/connectors/test-class-connector-posts.php",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-filter-input.php",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-db.php",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-connectors.php",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-connector.php",
+		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-author.php",
+		"/var/www/wordpress/wp-content/plugins/stream/languages/stream-en_US.po",
+		"/var/www/wordpress/wp-content/plugins/stream/languages/stream-en_US.mo",
+		"/var/www/wordpress/wp-content/plugins/stream/includes/functions.php",
+		"/var/www/wordpress/wp-content/plugins/stream/includes/db-updates.php",
+		"/var/www/wordpress/wp-content/plugins/stream/includes/feeds/rss-2.0.php",
+		"/var/www/wordpress/wp-content/plugins/stream/includes/feeds/atom.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-wordpress-seo.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-woocommerce.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-widgets.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-users.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-user-switching.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-settings.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-posts.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-menus.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-log.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-media.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-installer.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-gravityforms.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-editor.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-edd.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-comments.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-buddypress.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-blogs.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-bbpress.php",
+		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-acf.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-uninstall.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-settings.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-record.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-plugin.php",
+		"/var/www/wordpress/wp-content/plugins/stream/classes/class-network.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/SIGOES-Comunicados.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/ValidacionComunicado.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion/SIGOES-Validacion.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/ValidacionSIGOES.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/post-title-validation/SIGOES-Validacion.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/post-title-validation/validacion.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/post-title-validation/js/post-title-validation.js",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/js/ValidacionComunicado.js",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/Validacion.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/post-title-validation/Validacion.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/post-title-validation/post-title-validation.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-Validacion.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/js/post-title-validation.js",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-Validacion.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-Validacion.sublime-workspace",
+		"/var/www/wordpress/wp-content/plugins/custom-sidebars/inc/external/wpmu-lib/functions-wpmulib.php",
+		"/var/www/wordpress/wp-content/plugins/custom-sidebars/inc/class-custom-sidebars.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/Validacion/Validacion.js",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-validacion.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-validacion.sublime-workspace",
+		"/var/www/wordpress/wp-admin/admin-ajax.php",
+		"/var/www/wordpress/wp-includes/plugin.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/index.php",
+		"/var/www/wordpress/wp-content/plugins/mata-hoygan/mata_HOYGAN.php",
+		"/var/www/wordpress/wp-content/plugins/mata-hoygan/SIGOES-validacion.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/custom-sidebars/customsidebars.php",
+		"/var/www/wordpress/wp-includes/functions.php",
+		"/var/www/wordpress/wp-includes/load.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"$out",
+			"start",
+			"static",
+			"today",
+			"Carbon",
+			"Este día",
+			"dd/mm/yy",
+			"record-created",
+			"created",
+			"insert",
+			"new DateTime( 'now', $timezone = new DateTimeZone( 'UTC' ) )",
+			"UTC",
+			"fecha_ini",
+			"Admin-ajax.php",
+			"$date",
+			"get_gmt_from_date",
+			"$date",
+			"to",
+			"fecha",
+			"mata_HOYGAN",
+			"str_replace_once",
+			"stringrpos",
+			"string_at",
+			"spanish_metaphone",
+			"comparar_palabras",
+			"quitar_puntos",
+			"gSpell",
+			"fixmissingvowels",
+			"desporteniar",
+			"deshachear",
+			"desk",
+			"desestupidizar",
+			"desms",
+			"desmultiplicar",
+			"desalternar",
+			"deleet",
+			"dessimbolizar",
+			"es_numero_o_referencia",
+			"is_url",
+			"utf8tohtml",
+			"retornar_keywords_post",
+			"eliminar_lenguaje_grosero",
+			"corregir_ortografia",
+			"eliminar_lenguaje_grosero",
+			"corregir_ortografia",
+			"quitar_acentos",
+			"eliminar_lenguaje_grosero",
+			"cadena_sin_malas_palabras",
+			"desalternar",
+			"censuradas",
+			"MH_BADWORDS",
+			"eliminar_lenguaje_HOYGAN",
+			"//cadena",
+			"cadena",
+			"cadena_sin",
+			"fecha",
+			"hace",
+			"años",
+			"Hace",
+			"deszezear",
+			"fecha",
+			" ISO 8601",
+			"wp_stream_filter_input",
+			"$args",
+			"date_after",
+			"date_to",
+			"$date_to",
+			"$end",
+			"filter_date",
+			"filters_form",
+			"filtro",
+			"datepicker",
+			"jquery_datepicker",
+			"Y/m/d",
+			"jquery-ui-datepicker",
+			"yy",
+			"regional",
+			"wp_stream.locale",
+			"datepicker",
+			"jquery-ui-datepicker",
+			"wp-stream-datepicker",
+			"jquery-ui",
+			"wp-stream-datepicker",
+			"wp_enqueue_script",
+			"jquery-ui-datepicker",
+			"fecha",
+			"jQuery",
+			"jQuery)",
+			"Actividad",
+			"Ahora",
+			"Todo",
+			"Show",
+			"Show all users",
+			"All time",
+			"días",
+			"ahora",
+			"fecha",
+			"vista",
+			"button",
+			"vista",
+			"usuario",
+			"filtro",
+			"fecha",
+			"date_from",
+			"fecha inicio",
+			"ip",
+			"inicio",
+			"ip",
+			"inicio",
+			"ip",
+			"stream_enable_live_update",
+			"click",
+			"submit_button",
+			"display",
+			"list_table",
+			"primary",
+			"Inicio",
+			"Fecha",
+			"inicio",
+			"array_walk",
+			"users",
+			"Show all users",
+			"select2-chosen-2",
+			"record-query-submit",
+			"get_records",
+			"get_users",
+			"$data",
+			"get_users"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "classes/class-query.php",
+					"settings":
+					{
+						"buffer_size": 9399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4435,
+								4435
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2700.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "classes/class-admin.php",
+					"settings":
+					{
+						"buffer_size": 29530,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								23343,
+								23343
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 15606.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "classes/class-list-table.php",
+					"settings":
+					{
+						"buffer_size": 27479,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5671,
+								5671
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 3870.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "classes/class-date-interval.php",
+					"settings":
+					{
+						"buffer_size": 3630,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1128,
+								1123
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 702.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "includes/lib/Carbon.php",
+					"settings":
+					{
+						"buffer_size": 54639,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								7241,
+								7241
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4405.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"settings":
+					{
+						"buffer_size": 13532,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										169,
+										173
+									],
+									[
+										275,
+										279
+									],
+									[
+										329,
+										333
+									],
+									[
+										500,
+										504
+									],
+									[
+										632,
+										636
+									],
+									[
+										724,
+										728
+									],
+									[
+										908,
+										912
+									],
+									[
+										1049,
+										1053
+									],
+									[
+										1152,
+										1156
+									],
+									[
+										1181,
+										1185
+									],
+									[
+										1295,
+										1299
+									],
+									[
+										1636,
+										1640
+									],
+									[
+										1818,
+										1822
+									],
+									[
+										2019,
+										2023
+									],
+									[
+										2248,
+										2252
+									],
+									[
+										2342,
+										2346
+									],
+									[
+										2384,
+										2388
+									],
+									[
+										2509,
+										2513
+									],
+									[
+										2854,
+										2858
+									],
+									[
+										2987,
+										2991
+									],
+									[
+										3168,
+										3172
+									],
+									[
+										3302,
+										3306
+									],
+									[
+										3384,
+										3388
+									],
+									[
+										3451,
+										3455
+									],
+									[
+										3548,
+										3552
+									],
+									[
+										3653,
+										3657
+									],
+									[
+										3743,
+										3747
+									],
+									[
+										3844,
+										3848
+									],
+									[
+										3897,
+										3901
+									],
+									[
+										4034,
+										4038
+									],
+									[
+										4224,
+										4228
+									],
+									[
+										4399,
+										4403
+									],
+									[
+										4530,
+										4534
+									],
+									[
+										4707,
+										4711
+									],
+									[
+										4806,
+										4810
+									],
+									[
+										4885,
+										4889
+									],
+									[
+										4961,
+										4965
+									],
+									[
+										5031,
+										5035
+									],
+									[
+										5112,
+										5116
+									],
+									[
+										5179,
+										5183
+									],
+									[
+										5231,
+										5235
+									],
+									[
+										5427,
+										5431
+									],
+									[
+										5687,
+										5691
+									],
+									[
+										5817,
+										5821
+									],
+									[
+										5941,
+										5945
+									],
+									[
+										6094,
+										6098
+									],
+									[
+										6233,
+										6237
+									],
+									[
+										6306,
+										6310
+									],
+									[
+										6483,
+										6487
+									],
+									[
+										6630,
+										6634
+									],
+									[
+										6783,
+										6787
+									],
+									[
+										6979,
+										6983
+									],
+									[
+										7126,
+										7130
+									],
+									[
+										7253,
+										7257
+									],
+									[
+										7366,
+										7370
+									],
+									[
+										7469,
+										7473
+									],
+									[
+										7707,
+										7711
+									],
+									[
+										7985,
+										7989
+									],
+									[
+										8248,
+										8252
+									],
+									[
+										8492,
+										8496
+									],
+									[
+										8677,
+										8681
+									],
+									[
+										8907,
+										8911
+									],
+									[
+										9054,
+										9058
+									],
+									[
+										9247,
+										9251
+									],
+									[
+										9435,
+										9439
+									],
+									[
+										9645,
+										9649
+									],
+									[
+										9799,
+										9803
+									],
+									[
+										9875,
+										9879
+									],
+									[
+										10060,
+										10064
+									],
+									[
+										10227,
+										10231
+									],
+									[
+										10401,
+										10405
+									],
+									[
+										10902,
+										10906
+									],
+									[
+										10989,
+										10993
+									],
+									[
+										11148,
+										11152
+									],
+									[
+										11209,
+										11213
+									],
+									[
+										11270,
+										11274
+									],
+									[
+										11377,
+										11381
+									],
+									[
+										11419,
+										11423
+									],
+									[
+										11547,
+										11551
+									],
+									[
+										11689,
+										11693
+									],
+									[
+										11750,
+										11754
+									],
+									[
+										11813,
+										11817
+									],
+									[
+										12046,
+										12050
+									],
+									[
+										12245,
+										12249
+									],
+									[
+										12439,
+										12443
+									],
+									[
+										12511,
+										12515
+									],
+									[
+										12568,
+										12572
+									],
+									[
+										12784,
+										12788
+									],
+									[
+										12937,
+										12941
+									],
+									[
+										13044,
+										13048
+									],
+									[
+										13201,
+										13205
+									],
+									[
+										13371,
+										13375
+									],
+									[
+										13478,
+										13482
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 486.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 6,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 8,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 104.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			0.763540090771,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.unsaved_changes":
+	{
+		"height": 100.0
+	},
+	"output.xdebug":
+	{
+		"height": 98.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 337.0,
+	"status_bar_visible": true
+}
