@@ -1,32 +1,14 @@
 <?php
 /**
- * Plugin Name: Stream
- * Plugin URI: https://wp-stream.com/
- * Description: Stream tracks logged-in user activity so you can monitor every change made on your WordPress site in beautifully organized detail. All activity is organized by context, action and IP address for easy filtering. Developers can extend Stream with custom connectors to log any kind of action.
- * Version: 3.0.1
- * Author: Stream
- * Author URI: https://wp-stream.com/
+ *Plugin Name: SIGOES-Bitacora
+ *Plugin URI: http://modulos.egob.sv
+ *Description: Plugin para la implementacion de modulo de bitacora
+ *Version: 3.0
+ *Author: Equipo de desarrollo SIGOES
+ *Author URI: http://modulos.egob.sv
  * License: GPLv2+
  * Text Domain: stream
  * Domain Path: /languages
- */
-
-/**
- * Copyright (c) 2015 WP Stream Pty Ltd (https://wp-stream.com/)
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU General Public License, version 2 or, at
- * your discretion, any later version, as published by the Free
- * Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA
  */
 
 if ( ! version_compare( PHP_VERSION, '5.3', '>=' ) ) {
