@@ -776,6 +776,7 @@ class List_Table extends \WP_List_Table {
         $fecha_ini = (isset($_GET['date_from']))?$_GET['date_from']:"";
         $fecha_fin = (isset($_GET['date_to']))?$_GET['date_to']:"";
         $user_id   = (isset($_GET['user_id']))?$_GET['user_id']:"";
+        $context   = (isset($_GET['context']))?$_GET['context']:"";
         $connector = (isset($_GET['connector']))?$_GET['connector']:"";
         $action    = (isset($_GET['action']))?$_GET['action']:"";
 		echo '<p>	
@@ -786,6 +787,7 @@ class List_Table extends \WP_List_Table {
 				<input name="fecha_ini" type="hidden" value="'.$fecha_ini.'">
 				<input name="fecha_fin" type="hidden" value="'.$fecha_fin.'">
 				<input name="user_id" 	type="hidden" value="'.$user_id.'">
+				<input name="context"   type="hidden" value="'.$context.'">
 				<input name="connector" type="hidden" value="'.$connector.'">
 				<input name="action" 	type="hidden" value="'.$action.'">
 			</form>
