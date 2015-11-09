@@ -306,16 +306,16 @@ class Admin {
 		 *
 		 * @return string
 		 */
-		$settings_page_title = apply_filters( 'wp_stream_settings_form_title', esc_html__( 'Bitácora Configuración', 'bitácora' ) );
+		//$settings_page_title = apply_filters( 'wp_stream_settings_form_title', esc_html__( 'Bitácora Configuración', 'bitácora' ) );
 
-		$this->screen_id['settings'] = add_submenu_page(
-			$this->records_page_slug,
-			$settings_page_title,
-			esc_html__( 'Bitácora Configuración', 'bitácora' ),
-			$this->settings_cap,
-			$this->settings_page_slug,
-			array( $this, 'render_settings_page' )
-		);
+		// $this->screen_id['settings'] = add_submenu_page(
+		// 	$this->records_page_slug,
+		// 	$settings_page_title,
+		// 	esc_html__( 'Bitácora Configuración', 'bitácora' ),
+		// 	$this->settings_cap,
+		// 	$this->settings_page_slug,
+		// 	array( $this, 'render_settings_page' )
+		// );
 
 		if ( isset( $this->screen_id['main'] ) ) {
 			/**
