@@ -85,12 +85,6 @@ class List_Table extends \WP_List_Table {
 		);
 	}
 
-	function get_sortable_columns() {
-		return array(
-			'date' => array( 'date', false ),
-		);
-	}
-
 	function get_hidden_columns() {
 		if ( ! $user = wp_get_current_user() ) {
 			return array();
