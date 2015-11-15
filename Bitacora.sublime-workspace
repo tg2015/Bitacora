@@ -56,70 +56,18 @@
 	"buffers":
 	[
 		{
-			"file": "Bitacora.sublime-project",
+			"file": "classes/class-list-table.php",
 			"settings":
 			{
-				"buffer_size": 227,
+				"buffer_size": 28606,
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "classes/class-query.php",
-			"settings":
-			{
-				"buffer_size": 9399,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix",
-				"name": "Xdebug Context",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix",
-				"name": "Xdebug Watch",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"contents": "",
-			"settings":
-			{
-				"buffer_size": 0,
-				"line_ending": "Unix",
-				"name": "Xdebug Stack",
-				"read_only": true,
-				"scratch": true
-			}
-		},
-		{
-			"contents": "=> /var/www/wordpress/wp-content/plugins/Bitacora/classes/class-query.php\n	|+| 150\n	|+| 151\n	|+| 152\n	|+| 153\n	|+| 154\n	|+| 156\n	|+| 157\n	|+| 158\n	|+| 159\n	|+| 162\n",
-			"settings":
-			{
-				"buffer_size": 164,
-				"line_ending": "Unix",
-				"name": "Xdebug Breakpoint",
-				"read_only": true,
-				"scratch": true
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 360.0,
+		"height": 372.0,
 		"selected_items":
 		[
 			[
@@ -176,8 +124,29 @@
 	},
 	"file_history":
 	[
-		"/var/www/wordpress/wp-content/plugins/Bitacora/Bitacora.sublime-project",
 		"/var/www/wordpress/wp-content/plugins/Bitacora/classes/class-list-table.php",
+		"/var/www/wordpress/wp-content/plugins/Bitacora/Bitacora.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/Bitacora/classes/class-query.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/reportesXML/reporteBitacora.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/lib/phpjasperxml/class/PHPJasperXML.inc.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/SIGOES-Comunicados.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/Bitacora/classes/class-admin.php",
+		"/var/www/wordpress/wp-content/plugins/Bitacora/ui/js/admin.js",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/InstitucionController.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/ProyectoController.php",
+		"/home/gaboroja/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/var/www/wordpress/wp-content/plugins/Bitacora/stream.php",
+		"/var/www/wordpress/wp-content/plugins/Bitacora/includes/lib/Carbon.php",
+		"/var/www/wordpress/wp-content/plugins/Bitacora/includes/feeds/json.php",
+		"/var/www/wordpress/wp-content/plugins/Bitacora/includes/feeds/rss-2.0.php",
+		"/var/www/wordpress/wp-content/plugins/Bitacora/includes/feeds/atom.php",
+		"/var/www/ansp/wp-content/plugins/plugin-sigoes/controller/StreamingController.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/SoloUnaCategoria.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/index.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/view/ReporteView.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/ReporteController.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/GenerarReportes.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/EventoController.php",
 		"/var/www/wordpress/wp-content/plugins/Bitacora/.gitignore",
 		"/var/www/wordpress/wp-content/plugins/stream/ui/js/admin.js",
 		"/var/www/wordpress/wp-content/plugins/stream/Bitacora.sublime-project",
@@ -185,12 +154,7 @@
 		"/var/www/wordpress/wp-content/plugins/stream/classes/class-query.php",
 		"/var/www/wordpress/wp-content/plugins/stream/untitled.sublime-project",
 		"/var/www/wordpress/wp-content/plugins/stream/SIGOES-Bitacora.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/view/ReporteView.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/InstitucionController.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/GenerarReportes.php",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/OtrosController.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/ProyectoController.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/ReporteController.php",
 		"/var/www/wordpress/wp-content/plugins/stream/classes/class-date-interval.php",
 		"/var/www/wordpress/wp-content/plugins/stream/classes/class-list-table.php",
 		"/var/www/wordpress/wp-content/plugins/stream/classes/class-admin.php",
@@ -278,7 +242,6 @@
 		"/var/www/wordpress/wp-content/plugins/stream/classes/class-record.php",
 		"/var/www/wordpress/wp-content/plugins/stream/classes/class-plugin.php",
 		"/var/www/wordpress/wp-content/plugins/stream/classes/class-network.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/SIGOES-Comunicados.sublime-project",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/ValidacionComunicado.php",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion/SIGOES-Validacion.sublime-project",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/ValidacionSIGOES.sublime-project",
@@ -288,22 +251,7 @@
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/js/ValidacionComunicado.js",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/Validacion.sublime-project",
 		"/var/www/wordpress/wp-content/plugins/post-title-validation/Validacion.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/post-title-validation/post-title-validation.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-Validacion.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/js/post-title-validation.js",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-Validacion.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-Validacion.sublime-workspace",
-		"/var/www/wordpress/wp-content/plugins/custom-sidebars/inc/external/wpmu-lib/functions-wpmulib.php",
-		"/var/www/wordpress/wp-content/plugins/custom-sidebars/inc/class-custom-sidebars.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/Validacion/Validacion.js",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-validacion.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Validacion-Desarrollo/SIGOES-validacion.sublime-workspace",
-		"/var/www/wordpress/wp-admin/admin-ajax.php",
-		"/var/www/wordpress/wp-includes/plugin.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/index.php",
-		"/var/www/wordpress/wp-content/plugins/mata-hoygan/mata_HOYGAN.php",
-		"/var/www/wordpress/wp-content/plugins/mata-hoygan/SIGOES-validacion.sublime-project"
+		"/var/www/wordpress/wp-content/plugins/post-title-validation/post-title-validation.php"
 	],
 	"find":
 	{
@@ -311,7 +259,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
 			""
@@ -319,9 +267,25 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": false,
+		"case_sensitive": true,
 		"find_history":
 		[
+			"Order",
+			"Fecha",
+			"Contexto",
+			"Log de Usuario",
+			"Resetear",
+			"record-created",
+			"<time class=\"record-created\"",
+			"record-created",
+			"<time class=\"record-created",
+			"<time class=\"record-created\"",
+			"'d-m-Y'",
+			"'Y-m-d H:i:s'",
+			"inicio",
+			"main_page_title",
+			"context",
+			"filtro",
 			"$out",
 			"start",
 			"static",
@@ -433,23 +397,7 @@
 			"inicio",
 			"ip",
 			"stream_enable_live_update",
-			"click",
-			"submit_button",
-			"display",
-			"list_table",
-			"primary",
-			"Inicio",
-			"Fecha",
-			"inicio",
-			"array_walk",
-			"users",
-			"Show all users",
-			"select2-chosen-2",
-			"record-query-submit",
-			"get_records",
-			"get_users",
-			"$data",
-			"get_users"
+			"click"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -467,23 +415,23 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Bitacora.sublime-project",
+					"file": "classes/class-list-table.php",
 					"settings":
 					{
-						"buffer_size": 227,
+						"buffer_size": 28606,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								224,
-								224
+								5663,
+								5664
 							]
 						],
 						"settings":
@@ -536,87 +484,12 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"syntax": "Packages/JavaScript/JSON.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "classes/class-query.php",
-					"settings":
-					{
-						"buffer_size": 9399,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 2702.0,
+						"translation.y": 4104.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -624,171 +497,13 @@
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 2,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"BracketHighlighterBusy": false,
-							"bh_regions":
-							[
-								"bh_regex",
-								"bh_regex_center",
-								"bh_regex_open",
-								"bh_regex_close",
-								"bh_double_quote",
-								"bh_double_quote_center",
-								"bh_double_quote_open",
-								"bh_double_quote_close",
-								"bh_square",
-								"bh_square_center",
-								"bh_square_open",
-								"bh_square_close",
-								"bh_angle",
-								"bh_angle_center",
-								"bh_angle_open",
-								"bh_angle_close",
-								"bh_curly",
-								"bh_curly_center",
-								"bh_curly_open",
-								"bh_curly_close",
-								"bh_c_define",
-								"bh_c_define_center",
-								"bh_c_define_open",
-								"bh_c_define_close",
-								"bh_default",
-								"bh_default_center",
-								"bh_default_open",
-								"bh_default_close",
-								"bh_unmatched",
-								"bh_unmatched_center",
-								"bh_unmatched_open",
-								"bh_unmatched_close",
-								"bh_round",
-								"bh_round_center",
-								"bh_round_open",
-								"bh_round_close",
-								"bh_tag",
-								"bh_tag_center",
-								"bh_tag_open",
-								"bh_tag_close",
-								"bh_single_quote",
-								"bh_single_quote_center",
-								"bh_single_quote_open",
-								"bh_single_quote_close"
-							],
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		},
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 4,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"settings":
-					{
-						"buffer_size": 164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								164,
-								164
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -832,7 +547,7 @@
 		"rows":
 		[
 			0.0,
-			0.7,
+			0.924357034796,
 			1.0
 		]
 	},
@@ -870,6 +585,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 337.0,
+	"side_bar_width": 285.0,
 	"status_bar_visible": true
 }

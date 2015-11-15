@@ -78,7 +78,7 @@ class List_Table extends \WP_List_Table {
 				'date'    => __( 'Fecha', 'stream' ),
 				'summary' => __( 'Actividad', 'stream' ),
 				'user_id' => __( 'Usuario', 'stream' ),
-				'context' => __( 'Contexto', 'stream' ),
+				'context' => __( 'Ubicación SIGOES', 'stream' ),
 				'action'  => __( 'Acción', 'stream' ),
 				'ip'      => __( 'Dirección IP', 'stream' ),
 			)
@@ -616,7 +616,7 @@ class List_Table extends \WP_List_Table {
 
 		// Display reset action if records are being filtered
 		if ( ! empty( $query_vars ) ) {
-			$filters_string .= sprintf( '<a href="%s" id="record-query-reset"><span class="dashicons dashicons-dismiss"></span> <span class="record-query-reset-text">%s</span></a>', esc_url( $url ), __( 'Resetear Filtros', 'stream' ) );
+			$filters_string .= sprintf( '<a href="%s" id="record-query-reset"><span class="dashicons dashicons-dismiss"></span> <span class="record-query-reset-text">%s</span></a>', esc_url( $url ), __( 'Restablecer filtros', 'stream' ) );
 		}
 
 		return sprintf( '<div class="alignleft actions">%s</div>', $filters_string ); // xss ok
@@ -713,7 +713,7 @@ class List_Table extends \WP_List_Table {
 				<input type="search" id="record-search-input" name="search" value="%2$s" />
 				<input type="submit" name="" id="search-submit" class="button-primary" value="%1$s" />
 			</p>',
-			esc_attr__( 'Buscar Log de Usuario', 'stream' ),
+			esc_attr__( 'Buscar en Actividad', 'stream' ),
 			$search
 		);
 
