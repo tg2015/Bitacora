@@ -282,7 +282,7 @@ class Admin {
 		 *
 		 * @return string
 		 */
-		$main_menu_position = apply_filters( 'wp_stream_menu_position', '2.999999' );
+		$main_menu_position = apply_filters( 'wp_stream_menu_position', '105.999999' );
 
 		/**
 		 * Filter the main admin page title
