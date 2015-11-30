@@ -1,7 +1,6 @@
 <?php
 /**
  *Plugin Name: SIGOES-Bitacora
- *Plugin URI: http://modulos.egob.sv
  *Description: Plugin para la implementacion de modulo de bitacora
  *Version: 3.0
  *Author: Equipo de desarrollo SIGOES
