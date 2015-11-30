@@ -150,25 +150,25 @@ class Query {
 		if ( ! empty( $args['date_from'] ) ) {
 			$FechaInicial = $args['date_from'];
             $date   = date('Y-m-d', strtotime($FechaInicial)). ' 00:00:00';
-			$where .= $wpdb->prepare( " AND DATE($wpdb->stream.created) >= %s", $date );
+			$where .= $wpdb->prepare( " AND DATE_SUB($wpdb->stream.created,INTERVAL 6 HOUR) >= %s", $date );
 		}  
 
 		if ( ! empty( $args['date_to'] ) ) {
 			$FechaFinal   = $args['date_to'];
             $date    = date('Y-m-d', strtotime($FechaFinal)). ' 23:59:59';
-			$where .= $wpdb->prepare( " AND DATE($wpdb->stream.created) <= %s", $date );
+			$where .= $wpdb->prepare( " AND DATE_SUB($wpdb->stream.created,INTERVAL 6 HOUR) <= %s", $date );
 		}
 
 		if ( ! empty( $args['date_after'] ) ) {
 			$FechaDespues   = $args['date_after'];
             $date    = date('Y-m-d', strtotime($FechaDespues));
-			$where .= $wpdb->prepare( " AND DATE($wpdb->stream.created) > %s", $date );
+			$where .= $wpdb->prepare( " AND DATE_SUB($wpdb->stream.created,INTERVAL 6 HOUR) > %s", $date );
 		}
 
 		if ( ! empty( $args['date_before'] ) ) {
 			$FechaAntes   = $args['date_before'];
             $date    = date('Y-m-d', strtotime($FechaAntes));
-			$where .= $wpdb->prepare( " AND DATE($wpdb->stream.created) <= %s", $date ); 
+			$where .= $wpdb->prepare( " AND DATE_SUB($wpdb->stream.created,INTERVAL 6 HOUR) <= %s", $date ); 
 		}
 
 		if ( ! empty( $args['date'] ) ) {
