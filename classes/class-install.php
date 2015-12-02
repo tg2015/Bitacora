@@ -1,4 +1,9 @@
 <?php
+/*
+*Nombre del módulo: Bitacora
+*Objetivo: Gestionar los parametros de creacion de las tablas de la Bitacora
+*Dirección física: /SIGOES-bitacora/classes/class-install.php
+*/
 namespace WP_Stream;
 
 class Install {
@@ -24,7 +29,6 @@ class Install {
 
 	/**
 	 * Holds version of database at last update
-]	 *
 	 * @var string
 	 */
 	public $db_version;
@@ -164,6 +168,7 @@ class Install {
 		$uninstall_message = '';
 
 		// Check if all needed DB is present
+        /*array $missing_tables verifica en la Base de Datos si existen las tablas en wordpress*/
 		$missing_tables = array();
 
 		foreach ( $this->plugin->db->get_table_names() as $table_name ) {
@@ -172,7 +177,8 @@ class Install {
 			}
 		}
 
-		if ( $missing_tables ) {
+		if (! $missing_tables ) {
+        /*variable $database_message para mostrar un mensaje de admin_notices de que las tablas no existen*/
 			$database_message .= sprintf(
 				'%s <strong>%s</strong>',
 				_n(
@@ -410,8 +416,8 @@ class Install {
 		require_once ABSPATH . 'wp-admin/includes/upgrade.php';
 
 		$prefix = $this->table_prefix;
-
-		$sql = "CREATE TABLE {$prefix}stream (
+    /*variable $sql crea la tabla stream con el prefijo configurado en wordpress*/
+		$sql = "CREATE TABLE IF NOT EXISTS {$prefix}stream (
 			ID bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			site_id bigint(20) unsigned NOT NULL DEFAULT '1',
 			blog_id bigint(20) unsigned NOT NULL DEFAULT '1',
@@ -458,8 +464,8 @@ class Install {
 		$sql .= ';';
 
 		\dbDelta( $sql );
-
-		$sql = "CREATE TABLE {$prefix}stream_meta (
+       /*variable $sql crea la tabla stream_meta con el prefijo configurado en wordpress*/
+		$sql = "CREATE TABLE IF NOT EXISTS {$prefix}stream_meta (
 			meta_id bigint(20) unsigned NOT NULL AUTO_INCREMENT,
 			record_id bigint(20) unsigned NOT NULL,
 			meta_key varchar(200) NOT NULL,

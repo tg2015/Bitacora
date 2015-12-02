@@ -1,4 +1,9 @@
 <?php
+/*
+*Nombre del módulo: Bitacora
+*Objetivo: Gestionar la vista de la Bitacora
+*Dirección física: /SIGOES-bitacora/classes/class-list-table.php
+*/
 namespace WP_Stream;
 
 class List_Table extends \WP_List_Table {
@@ -65,7 +70,7 @@ class List_Table extends \WP_List_Table {
 		</div>
 		<?php
 	}
-
+    /*funcion get_columns define las cabeceraz del grip de bitacora en wordpress*/
 	function get_columns() {
 		/**
 		 * Allows devs to add new columns to table
@@ -211,7 +216,7 @@ class List_Table extends \WP_List_Table {
 	public function get_total_found_rows() {
 		return $this->plugin->db->query->found_records;
 	}
-
+    /*funcion column_default formatea los datos del grip de bitacora en wordpress*/
 	function column_default( $item, $column_name ) {
 		$out = '';
 		$record = new Record( $item );
@@ -490,7 +495,7 @@ class List_Table extends \WP_List_Table {
 
 		return $all_records;
 	}
-
+/*funcion get_filters obtiene los valores de los filtros de bitacora y se los envia a class-query.php que funciona como controlador*/
 	public function get_filters() {
 		$filters = array();
 
@@ -713,7 +718,7 @@ class List_Table extends \WP_List_Table {
 
 		return $out;
 	}
-
+/*funcion filter_date para capturar y formatear los filtros de fecha*/
 	function filter_date( $items ) {
 		wp_enqueue_style( 'jquery-ui' );
 		wp_enqueue_style( 'wp-stream-datepicker' );
@@ -764,7 +769,12 @@ class List_Table extends \WP_List_Table {
 
 		return ob_get_clean();
 	}
-
+    /*funcion display muestra en pantalla la informacion de la bitacora(el grip y filtros),
+      Ademas se han configurado botones ocultos para capturar los valores de los
+      filtros para ser enviados al SIGOES en la parte de reporteria.
+      Direccion fisica para el envio de valores de filtros:
+      SIGOES-Comunicados/includes/reportesXML/reporteBitacora.php
+      */
 	function display() {
 		$url = self_admin_url( $this->plugin->admin->admin_parent_page );
         $fecha_ini = (isset($_GET['date_from']))?$_GET['date_from']:"";

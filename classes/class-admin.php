@@ -1,4 +1,9 @@
 <?php
+/*
+*Nombre del módulo: Bitacora
+*Objetivo: Crear el area de administración de la Bitacora
+*Dirección física: /SIGOES-bitacora/classes/class-amin.php
+*/
 namespace WP_Stream;
 
 use DateTime;
@@ -282,6 +287,7 @@ class Admin {
 		 *
 		 * @return string
 		 */
+		/*Variable $main_menu_position para la posicion en el menu de wordpress*/
 		$main_menu_position = apply_filters( 'wp_stream_menu_position', '52.999999' );
 
 		/**
@@ -289,8 +295,9 @@ class Admin {
 		 *
 		 * @return string
 		 */
+		/*variable $main_page_title para el titulo de la bitacora en la interfaz*/
 		$main_page_title = apply_filters( 'wp_stream_admin_page_title', esc_html__( 'SIGOES-Bitácora', 'bitácora' ) );
-
+       /* array screen_id[] para las configuraciones del menu de bitacora en wordpress*/
 		$this->screen_id['main'] = add_menu_page(
 			$main_page_title,
 			$main_menu_title,
@@ -300,22 +307,6 @@ class Admin {
 			'div',
 			$main_menu_position
 		);
-
-		/**
-		 * Filter the Settings admin page title
-		 *
-		 * @return string
-		 */
-		//$settings_page_title = apply_filters( 'wp_stream_settings_form_title', esc_html__( 'Bitácora Configuración', 'bitácora' ) );
-
-		// $this->screen_id['settings'] = add_submenu_page(
-		// 	$this->records_page_slug,
-		// 	$settings_page_title,
-		// 	esc_html__( 'Bitácora Configuración', 'bitácora' ),
-		// 	$this->settings_cap,
-		// 	$this->settings_page_slug,
-		// 	array( $this, 'render_settings_page' )
-		// );
 
 		if ( isset( $this->screen_id['main'] ) ) {
 			/**

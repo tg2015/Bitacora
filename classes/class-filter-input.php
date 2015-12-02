@@ -1,4 +1,9 @@
 <?php
+/*
+*Nombre del módulo: Bitacora
+*Objetivo: Gestionar los tipos de paso de parametros de la Bitacora
+*Dirección física: /SIGOES-bitacora/classes/class-filter-input.php
+*/
 namespace WP_Stream;
 
 class Filter_Input {
@@ -28,6 +33,7 @@ class Filter_Input {
 		$super = null;
 
 		// @codingStandardsIgnoreStart
+	   /*varibale $type determina que tipo de metodo se hasta usando para insertar en wordpress */
 		switch ( $type ) {
 			case INPUT_POST :
 				$super = $_POST;
