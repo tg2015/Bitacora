@@ -1,3 +1,6 @@
-*.tmp
 *.~
 *.txt~
+/.phpintel/
+*.sublime-project
+*.sublime-worksapce
+*.tmp
