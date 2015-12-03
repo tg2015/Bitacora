@@ -1,4 +1,9 @@
 <?php
+/*
+*Nombre del módulo: Bitacora
+*Objetivo: Gestionar el controlador de la Bitacora
+*Dirección física: /SIGOES-bitacora/classes/class-query.php
+*/
 namespace WP_Stream;
 
 class Query {
@@ -103,6 +108,7 @@ class Query {
 		/**
 		 * PARSE CORE PARAMS
 		 */
+		/*Filtros en el WHERE de la consulta hecha a la class-db.php*/
 		if ( is_numeric( $args['site_id'] ) ) {
 			$where .= $wpdb->prepare( " AND $wpdb->stream.site_id = %d", $args['site_id'] );
 		}
@@ -147,6 +153,7 @@ class Query {
 		/**
 		 * PARSE DATE PARAM FAMILY
 		 */
+	/*Inicio de filtros de fecha en el WHERE de la consulta hecha a la class-db.php*/
 		if ( ! empty( $args['date_from'] ) ) {
 			$FechaInicial = $args['date_from'];
             $date   = date('Y-m-d', strtotime($FechaInicial)). ' 00:00:00';
