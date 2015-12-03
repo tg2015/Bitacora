@@ -1,0 +1,13 @@
+{
+	"folders":
+	[
+		{
+			"path": "/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora"
+		}
+	],
+"settings": {
+        "xdebug": {
+             "url": "http://172.16.0.103/wordpress/wp-admin/plugins.php"
+        }
+    }
+}

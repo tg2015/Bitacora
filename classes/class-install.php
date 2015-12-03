@@ -177,20 +177,6 @@ class Install {
 			}
 		}
 
-		if (! $missing_tables ) {
-        /*variable $database_message para mostrar un mensaje de admin_notices de que las tablas no existen*/
-			$database_message .= sprintf(
-				'%s <strong>%s</strong>',
-				_n(
-					'The following table is not present in the WordPress database:',
-					'The following tables are not present in the WordPress database:',
-					count( $missing_tables ),
-					'stream'
-				),
-				esc_html( implode( ', ', $missing_tables ) )
-			);
-		}
-
 		if ( is_plugin_active_for_network( $this->plugin->locations['plugin'] ) && current_user_can( 'manage_network_plugins' ) ) {
 			$uninstall_message = sprintf( __( 'Please <a href="%s">uninstall</a> the Stream plugin and activate it again.', 'stream' ), network_admin_url( 'plugins.php#stream' ) );
 		} elseif ( current_user_can( 'activate_plugins' ) ) {
