@@ -777,7 +777,7 @@ class List_Table extends \WP_List_Table {
 			<form method="post" action="admin.php?page=ReporteBitacora" target="_blank">
 			<input type="submit" class="button-primary" name="Exportar" value="Exportar" />
 			<input name="formato" type="radio" value="pdf" checked>PDF
-    		<input name="formato" type="radio" value="xls">XLS
+    		
 				<input name="fecha_ini" type="hidden" value="'.$fecha_ini.'">
 				<input name="fecha_fin" type="hidden" value="'.$fecha_fin.'">
 				<input name="user_id" 	type="hidden" value="'.$user_id.'">
@@ -786,7 +786,7 @@ class List_Table extends \WP_List_Table {
 				<input name="action" 	type="hidden" value="'.$action.'">
 			</form>
 			</p>';
-
+		//echo <input name="formato" type="radio" value="xls">XLS;
 		echo '<form method="get" action="' . esc_url( $url ) . '" id="record-filter-form">';
 		echo $this->filter_search(); // xss ok
 
