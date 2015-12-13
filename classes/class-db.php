@@ -51,7 +51,7 @@ class DB {
 		 *
 		 * @return string
 		 */
-		/*variable $prefix que captura el prefijo global configurado en wordpress*/
+	/*variable $prefix que captura el prefijo global configurado en wordpress*/
 		$prefix = apply_filters( 'wp_stream_db_tables_prefix', $wpdb->base_prefix );
 
 		$this->table         = $prefix . 'stream';
@@ -105,7 +105,7 @@ class DB {
         /*array $fields para insertar en las tablas de bitacora*/
 		$fields = array( 'object_id', 'site_id', 'blog_id', 'user_id', 'user_role', 'created', 'summary', 'ip', 'connector', 'context', 'action' );
 		$data   = array_intersect_key( $recordarr, array_flip( $fields ) );
-		$data   = array_filter( $data );
+
 		$result = $wpdb->insert( $this->table, $data );
 
 		if ( 1 !== $result ) {
@@ -156,7 +156,7 @@ class DB {
 	 */
 	public function insert_meta( $record_id, $key, $val ) {
 		global $wpdb;
-        
+
 		$result = $wpdb->insert(
 			$this->table_meta,
 			array(
@@ -185,8 +185,17 @@ class DB {
 	 */
 	function existing_records( $column ) {
 		global $wpdb;
-        /*variable $rows que obtiene todos los registros de la bitacora*/ 
-		$rows = $wpdb->get_results( "SELECT {$column} FROM $wpdb->stream GROUP BY {$column}", 'ARRAY_A' );
+
+		// Sanitize column
+		$allowed_columns = array( 'ID', 'site_id', 'blog_id', 'object_id', 'user_id', 'user_role', 'created', 'summary', 'connector', 'context', 'action', 'ip' );
+		if ( ! in_array( $column, $allowed_columns ) ) {
+			return array();
+		}
+
+		$rows = $wpdb->get_results(
+			"SELECT DISTINCT $column FROM $wpdb->stream", 
+			'ARRAY_A'
+		);
 
 		if ( is_array( $rows ) && ! empty( $rows ) ) {
 			$output_array = array();
@@ -203,5 +212,18 @@ class DB {
 		$column = sprintf( 'stream_%s', $column );
 
 		return isset( $this->plugin->connectors->term_labels[ $column ] ) ? $this->plugin->connectors->term_labels[ $column ] : array();
+	}
+
+	/**
+	 * Helper function for calling $this->query->query()
+	 *
+	 * @see Query->query()
+	 *
+	 * @param array Query args
+	 *
+	 * @return array Stream Records
+	 */
+	function query( $args ) {
+		return $this->query->query( $args );
 	}
 }

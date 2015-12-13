@@ -56,10 +56,20 @@
 	"buffers":
 	[
 		{
+			"contents": "Searching 193 files for \"Show filter controls via the screen options tab above.\" (case sensitive)\n\n/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-list-table.php:\n  542  		\n  543  		$filters_string  = sprintf( '<input type=\"hidden\" name=\"page\" value=\"%s\" />', 'wp_stream' );\n  544: 		$filters_string .= sprintf( '<span class=\"filter_info hidden\">%s</span>', esc_html__( 'Show filter controls via the screen options tab above.', 'stream' ) );\n  545  \n  546  		foreach ( $filters as $name => $data ) {\n\n/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/languages/stream-en_US.po:\n  332  \n  333  #: classes/class-list-table.php:545\n  334: msgid \"Show filter controls via the screen options tab above.\"\n  335  msgstr \"\"\n  336  \n\n2 matches across 2 files\n",
+			"settings":
+			{
+				"buffer_size": 774,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
+		},
+		{
 			"file": "classes/class-list-table.php",
 			"settings":
 			{
-				"buffer_size": 29341,
+				"buffer_size": 29043,
 				"line_ending": "Unix"
 			}
 		},
@@ -97,10 +107,10 @@
 			}
 		},
 		{
-			"contents": "",
+			"contents": "=> /var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-query.php\n	|+| 158\n	|+| 159\n	|+| 160\n	|+| 164\n	|+| 165\n	|+| 166\n	|+| 170\n",
 			"settings":
 			{
-				"buffer_size": 0,
+				"buffer_size": 144,
 				"line_ending": "Unix",
 				"name": "Xdebug Breakpoint",
 				"read_only": true,
@@ -168,14 +178,14 @@
 	},
 	"file_history":
 	[
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-install.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-query.php",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/SIGOES-Bitacora.sublime-project",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-list-table.php",
+		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-install.php",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/SIGOES-readme.txt",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/Bitacora.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-query.php",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/ui/js/admin.js",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-admin.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-list-table.php",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/stream.php",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-date-interval.php",
 		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/phpcs.ruleset.xml",
@@ -314,6 +324,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"Show filter controls via the screen options tab above.",
 			"record-created",
 			"insert",
 			"record-created",
@@ -440,8 +451,7 @@
 			"Show all users",
 			"All time",
 			"días",
-			"ahora",
-			"fecha"
+			"ahora"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -459,23 +469,119 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"settings":
+					{
+						"buffer_size": 774,
+						"regions":
+						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										391,
+										445
+									],
+									[
+										667,
+										721
+									]
+								],
+								"scope": ""
+							}
+						},
+						"selection":
+						[
+							[
+								390,
+								390
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"detect_indentation": false,
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
 					"file": "classes/class-list-table.php",
 					"settings":
 					{
-						"buffer_size": 29341,
+						"buffer_size": 29043,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								24915,
-								24915
+								0,
+								0
 							]
 						],
 						"settings":
@@ -533,7 +639,7 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 14706.0,
+						"translation.y": 1168.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -545,7 +651,7 @@
 			"sheets":
 			[
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"settings":
 					{
 						"buffer_size": 0,
@@ -620,39 +726,6 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"settings":
-					{
-						"buffer_size": 0,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
-							"word_wrap": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
-			]
-		},
-		{
-			"selected": 0,
-			"sheets":
-			[
-				{
 					"buffer": 3,
 					"settings":
 					{
@@ -669,6 +742,54 @@
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
 							"word_wrap": false
@@ -678,7 +799,13 @@
 						"zoom_level": 1.0
 					},
 					"type": "text"
-				},
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
 				{
 					"buffer": 4,
 					"settings":
@@ -696,6 +823,129 @@
 						],
 						"settings":
 						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
+							"word_wrap": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"settings":
+					{
+						"buffer_size": 144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								144,
+								144
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close"
+							],
 							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
 							"word_wrap": false
@@ -749,7 +999,7 @@
 		"rows":
 		[
 			0.0,
-			0.889561270802,
+			0.7,
 			1.0
 		]
 	},

@@ -108,7 +108,7 @@ class Query {
 		/**
 		 * PARSE CORE PARAMS
 		 */
-		/*Filtros en el WHERE de la consulta hecha a la class-db.php*/
+	/*Filtros en el WHERE de la consulta hecha a la class-db.php*/
 		if ( is_numeric( $args['site_id'] ) ) {
 			$where .= $wpdb->prepare( " AND $wpdb->stream.site_id = %d", $args['site_id'] );
 		}
@@ -131,7 +131,12 @@ class Query {
 
 		if ( ! empty( $args['search'] ) ) {
 			$field  = ! empty( $args['search_field'] ) ? $args['search_field'] : 'summary';
-			$where .= $wpdb->prepare( " AND $wpdb->stream.{$field} LIKE %s", "%{$args['search']}%" );
+
+			// Sanitize field
+			$allowed_fields = array( 'ID', 'site_id', 'blog_id', 'object_id', 'user_id', 'user_role', 'created', 'summary', 'connector', 'context', 'action', 'ip' );
+			if ( in_array( $field, $allowed_fields ) ) {
+				$where .= $wpdb->prepare( " AND $wpdb->stream.{$field} LIKE %s", "%{$args['search']}%" );
+			}
 		}
 
 		if ( ! empty( $args['connector'] ) ) {
@@ -182,7 +187,6 @@ class Query {
 			$args['date_from'] = date( 'Y-m-d', strtotime( $args['date'] ) ) . ' 00:00:00';
 			$args['date_to']   = date( 'Y-m-d', strtotime( $args['date'] ) ) . ' 23:59:59';
 		}
-
 		/**
 		 * PARSE __IN PARAM FAMILY
 		 */
@@ -206,7 +210,7 @@ class Query {
 
 				if ( ! empty( $value ) ) {
 					$format = '(' . join( ',', array_fill( 0, count( $value ), $type ) ) . ')';
-					$where .= $wpdb->prepare( " AND $wpdb->stream.%s IN {$format}", $field, $value );
+					$where .= $wpdb->prepare( " AND $wpdb->stream.%s IN {$format}", $field, $value ); 
 				}
 			}
 		}
@@ -234,7 +238,7 @@ class Query {
 
 				if ( ! empty( $value ) ) {
 					$format = '(' . join( ',', array_fill( 0, count( $value ), $type ) ) . ')';
-					$where .= $wpdb->prepare( " AND $wpdb->stream.%s NOT IN {$format}", $field, $value );
+					$where .= $wpdb->prepare( " AND $wpdb->stream.%s NOT IN {$format}", $field, $value ); 
 				}
 			}
 		}
@@ -314,7 +318,7 @@ class Query {
 		/**
 		 * QUERY THE DATABASE FOR RESULTS
 		 */
-		$results = $wpdb->get_results( $query );
+		$results = $wpdb->get_results( $query ); // @codingStandardsIgnoreLine $query already prepared
 
 		// Hold the number of records found
 		$this->found_records = absint( $wpdb->get_var( 'SELECT FOUND_ROWS()' ) );
