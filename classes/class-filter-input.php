@@ -33,7 +33,7 @@ class Filter_Input {
 		$super = null;
 
 		// @codingStandardsIgnoreStart
-	   /*varibale $type determina que tipo de metodo se hasta usando para insertar en wordpress */
+       /*varibale $type determina que tipo de metodo se hasta usando para insertar en wordpress */
 		switch ( $type ) {
 			case INPUT_POST :
 				$super = $_POST;

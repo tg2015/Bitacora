@@ -70,7 +70,7 @@ class List_Table extends \WP_List_Table {
 		</div>
 		<?php
 	}
-    /*funcion get_columns define las cabeceraz del grip de bitacora en wordpress*/
+
 	function get_columns() {
 		/**
 		 * Allows devs to add new columns to table
@@ -203,7 +203,7 @@ class List_Table extends \WP_List_Table {
 			$args['records_per_page'] = $this->get_items_per_page( 'edit_stream_per_page', 20 );
 		}
 
-		$items = $this->plugin->db->query->query( $args );
+		$items = $this->plugin->db->query( $args );
 
 		return $items;
 	}
@@ -216,7 +216,7 @@ class List_Table extends \WP_List_Table {
 	public function get_total_found_rows() {
 		return $this->plugin->db->query->found_records;
 	}
-    /*funcion column_default formatea los datos del grip de bitacora en wordpress*/
+/*funcion column_default formatea los datos del grip de bitacora en wordpress*/
 	function column_default( $item, $column_name ) {
 		$out = '';
 		$record = new Record( $item );
@@ -256,9 +256,17 @@ class List_Table extends \WP_List_Table {
 			case 'user_id' :
 				$user = new Author( (int) $record->user_id, (array) maybe_unserialize( $record->user_meta ) );
 
+				$filtered_records_url = add_query_arg(
+					array(
+						'page'    => $this->plugin->admin->records_page_slug,
+						'user_id' => absint( $user->id ),
+					),
+					self_admin_url( $this->plugin->admin->admin_parent_page )
+				);
+
 				$out = sprintf(
 					'<a href="%s">%s <span>%s</span></a>%s%s%s',
-					$user->get_records_page_url(),
+					$filtered_records_url,
 					$user->get_avatar_img( 80 ),
 					$user->get_display_name(),
 					$user->is_deleted() ? sprintf( '<br /><small class="deleted">%s</small>', esc_html__( 'Deleted User', 'stream' ) ) : '',
@@ -495,7 +503,7 @@ class List_Table extends \WP_List_Table {
 
 		return $all_records;
 	}
-/*funcion get_filters obtiene los valores de los filtros de bitacora y se los envia a class-query.php que funciona como controlador*/
+
 	public function get_filters() {
 		$filters = array();
 
@@ -539,7 +547,7 @@ class List_Table extends \WP_List_Table {
 	function filters_form() {
 		$user_id = get_current_user_id();
 		$filters = $this->get_filters();
-		
+
 		$filters_string  = sprintf( '<input type="hidden" name="page" value="%s" />', 'wp_stream' );
 		$filters_string .= sprintf( '<span class="filter_info hidden">%s</span>', esc_html__( 'Show filter controls via the screen options tab above.', 'stream' ) );
 
@@ -769,12 +777,7 @@ class List_Table extends \WP_List_Table {
 
 		return ob_get_clean();
 	}
-    /*funcion display muestra en pantalla la informacion de la bitacora(el grip y filtros),
-      Ademas se han configurado botones ocultos para capturar los valores de los
-      filtros para ser enviados al SIGOES en la parte de reporteria.
-      Direccion fisica para el envio de valores de filtros:
-      SIGOES-Comunicados/includes/reportesXML/reporteBitacora.php
-      */
+
 	function display() {
 		$url = self_admin_url( $this->plugin->admin->admin_parent_page );
         $fecha_ini = (isset($_GET['date_from']))?$_GET['date_from']:"";
@@ -795,7 +798,6 @@ class List_Table extends \WP_List_Table {
 				<input name="action" 	type="hidden" value="'.$action.'">
 			</form>
 			</p>';
-
 		echo '<form method="get" action="' . esc_url( $url ) . '" id="record-filter-form">';
 		echo $this->filter_search(); // xss ok
 
