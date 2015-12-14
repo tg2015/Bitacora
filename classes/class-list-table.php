@@ -786,6 +786,7 @@ class List_Table extends \WP_List_Table {
         $context   = (isset($_GET['context']))?$_GET['context']:"";
         $connector = (isset($_GET['connector']))?$_GET['connector']:"";
         $action    = (isset($_GET['action']))?$_GET['action']:"";
+        $search    = (isset($_GET['search']))?$_GET['search']:"";
 		echo '<p>	
 			<form method="post" action="admin.php?page=ReporteBitacora" target="_blank">
 			<input type="submit" class="button-primary" name="Exportar" value="Exportar" />
@@ -796,6 +797,7 @@ class List_Table extends \WP_List_Table {
 				<input name="context"   type="hidden" value="'.$context.'">
 				<input name="connector" type="hidden" value="'.$connector.'">
 				<input name="action" 	type="hidden" value="'.$action.'">
+                <input name="search" 	type="hidden" value="'.$search.'">
 			</form>
 			</p>';
 		echo '<form method="get" action="' . esc_url( $url ) . '" id="record-filter-form">';
