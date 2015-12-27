@@ -8,8 +8,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2015-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2015-12-18 23:33-0600\n"
+"Last-Translator: Gab <024gab@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: classes/class-admin.php:195
@@ -18,7 +18,8 @@ msgstr ""
 
 #. #-#-#-#-#  tmp-stream.pot (Stream 3.0.4)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: classes/class-admin.php:270 classes/class-network.php:122
+#: classes/class-admin.php:270
+#: classes/class-network.php:122
 #: connectors/class-connector-settings.php:245
 msgid "Stream"
 msgstr ""
@@ -31,7 +32,8 @@ msgstr ""
 msgid "Stream Settings"
 msgstr ""
 
-#: classes/class-admin.php:308 classes/class-admin.php:662
+#: classes/class-admin.php:308
+#: classes/class-admin.php:662
 #: connectors/class-connector-settings.php:216
 #: connectors/class-connector-settings.php:237
 #: connectors/class-connector-woocommerce.php:728
@@ -39,30 +41,23 @@ msgid "Settings"
 msgstr ""
 
 #: classes/class-admin.php:369
-msgid ""
-"Are you sure you want to delete all Stream activity records from the "
-"database? This cannot be undone."
+msgid "Are you sure you want to delete all Stream activity records from the database? This cannot be undone."
 msgstr ""
 
 #: classes/class-admin.php:370
-msgid ""
-"Are you sure you want to reset all site settings to default? This cannot be "
-"undone."
+msgid "Are you sure you want to reset all site settings to default? This cannot be undone."
 msgstr ""
 
 #: classes/class-admin.php:371
-msgid ""
-"Are you sure you want to uninstall and deactivate Stream? This will delete "
-"all Stream tables from the database and cannot be undone."
-msgstr ""
+msgid "Are you sure you want to uninstall and deactivate Stream? This will delete all Stream tables from the database and cannot be undone."
+msgstr "¿Seguro que deseas desinstalar y desactivar Stream? Esto eliminará todas las tablas Stream desde la base de datos y no se puede deshacer."
 
 #: classes/class-admin.php:412
-msgid ""
-"Are you sure you want to perform bulk actions on over %s items? This process "
-"could take a while to complete."
+msgid "Are you sure you want to perform bulk actions on over %s items? This process could take a while to complete."
 msgstr ""
 
-#: classes/class-admin.php:546 classes/class-uninstall.php:51
+#: classes/class-admin.php:546
+#: classes/class-uninstall.php:51
 msgid "You don't have sufficient privileges to do this action."
 msgstr ""
 
@@ -70,7 +65,8 @@ msgstr ""
 msgid "Uninstall"
 msgstr ""
 
-#: classes/class-author.php:74 classes/class-author.php:82
+#: classes/class-author.php:74
+#: classes/class-author.php:82
 #: classes/class-settings.php:787
 msgid "N/A"
 msgstr ""
@@ -88,25 +84,19 @@ msgid "SITE IS DISCONNECTED"
 msgstr ""
 
 #: classes/class-connectors.php:123
-msgid ""
-"%s class wasn't loaded because it doesn't implement the get_label method."
+msgid "%s class wasn't loaded because it doesn't implement the get_label method."
 msgstr ""
 
 #: classes/class-connectors.php:127
-msgid ""
-"%s class wasn't loaded because it doesn't implement the register method."
+msgid "%s class wasn't loaded because it doesn't implement the register method."
 msgstr ""
 
 #: classes/class-connectors.php:131
-msgid ""
-"%s class wasn't loaded because it doesn't implement the get_context_labels "
-"method."
+msgid "%s class wasn't loaded because it doesn't implement the get_context_labels method."
 msgstr ""
 
 #: classes/class-connectors.php:135
-msgid ""
-"%s class wasn't loaded because it doesn't implement the get_action_labels "
-"method."
+msgid "%s class wasn't loaded because it doesn't implement the get_action_labels method."
 msgstr ""
 
 #: classes/class-connectors.php:141
@@ -121,7 +111,8 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: classes/class-date-interval.php:58 classes/class-date-interval.php:63
+#: classes/class-date-interval.php:58
+#: classes/class-date-interval.php:63
 #: classes/class-date-interval.php:68
 msgid "Last %d Days"
 msgstr ""
@@ -134,7 +125,8 @@ msgstr ""
 msgid "Last Month"
 msgstr ""
 
-#: classes/class-date-interval.php:83 classes/class-date-interval.php:88
+#: classes/class-date-interval.php:83
+#: classes/class-date-interval.php:88
 #: classes/class-date-interval.php:93
 msgid "Last %d Months"
 msgstr ""
@@ -161,9 +153,9 @@ msgid_plural "The following tables are not present in the WordPress database:"
 msgstr[0] ""
 msgstr[1] ""
 
-#: classes/class-install.php:172 classes/class-install.php:174
-msgid ""
-"Please <a href=\"%s\">uninstall</a> the Stream plugin and activate it again."
+#: classes/class-install.php:172
+#: classes/class-install.php:174
+msgid "Please <a href=\"%s\">uninstall</a> the Stream plugin and activate it again."
 msgstr ""
 
 #: classes/class-install.php:248
@@ -179,9 +171,7 @@ msgid "Stream Database Update Required"
 msgstr ""
 
 #: classes/class-install.php:297
-msgid ""
-"Stream has updated! Before we send you on your way, we need to update your "
-"database to the newest version."
+msgid "Stream has updated! Before we send you on your way, we need to update your database to the newest version."
 msgstr ""
 
 #: classes/class-install.php:298
@@ -220,15 +210,18 @@ msgstr ""
 msgid "User"
 msgstr ""
 
-#: classes/class-list-table.php:81 classes/class-settings.php:745
+#: classes/class-list-table.php:81
+#: classes/class-settings.php:745
 msgid "Context"
 msgstr ""
 
-#: classes/class-list-table.php:82 classes/class-settings.php:746
+#: classes/class-list-table.php:82
+#: classes/class-settings.php:746
 msgid "Action"
 msgstr ""
 
-#: classes/class-list-table.php:83 classes/class-settings.php:747
+#: classes/class-list-table.php:83
+#: classes/class-settings.php:747
 msgid "IP Address"
 msgstr ""
 
@@ -300,9 +293,12 @@ msgstr ""
 msgid "Live updates"
 msgstr ""
 
-#: classes/class-list-table.php:875 classes/class-network.php:271
-#: classes/class-settings.php:251 classes/class-settings.php:277
-#: classes/class-settings.php:307 classes/class-settings.php:321
+#: classes/class-list-table.php:875
+#: classes/class-network.php:271
+#: classes/class-settings.php:251
+#: classes/class-settings.php:277
+#: classes/class-settings.php:307
+#: classes/class-settings.php:321
 msgid "Enabled"
 msgstr ""
 
@@ -310,8 +306,7 @@ msgstr ""
 msgid ""
 "Live updates could not be enabled because Heartbeat is not loaded.\n"
 "\n"
-"Your hosting provider or another plugin may have disabled it for performance "
-"reasons."
+"Your hosting provider or another plugin may have disabled it for performance reasons."
 msgstr ""
 
 #: classes/class-live-update.php:187
@@ -337,9 +332,7 @@ msgid "These settings apply to all sites on the network."
 msgstr ""
 
 #: classes/class-network.php:200
-msgid ""
-"These default settings will apply to new sites created on the network. These "
-"settings do not alter existing sites."
+msgid "These default settings will apply to new sites created on the network. These settings do not alter existing sites."
 msgstr ""
 
 #: classes/class-network.php:270
@@ -347,9 +340,7 @@ msgid "Site Access"
 msgstr ""
 
 #: classes/class-network.php:273
-msgid ""
-"Allow sites on this network to view their Stream activity. Leave unchecked "
-"to only allow Stream to be viewed in the Network Admin."
+msgid "Allow sites on this network to view their Stream activity. Leave unchecked to only allow Stream to be viewed in the Network Admin."
 msgstr ""
 
 #: classes/class-network.php:360
@@ -360,7 +351,8 @@ msgstr ""
 msgid "sites"
 msgstr ""
 
-#: classes/class-network.php:423 classes/class-network.php:501
+#: classes/class-network.php:423
+#: classes/class-network.php:501
 msgid "Site"
 msgstr ""
 
@@ -395,12 +387,11 @@ msgid ""
 msgstr ""
 
 #: classes/class-settings.php:151
-msgid ""
-"Actions performed by the system when a user is not logged in (e.g. auto site "
-"upgrader, or invoking WP-CLI without --user)"
+msgid "Actions performed by the system when a user is not logged in (e.g. auto site upgrader, or invoking WP-CLI without --user)"
 msgstr ""
 
-#: classes/class-settings.php:224 connectors/class-connector-settings.php:238
+#: classes/class-settings.php:224
+#: connectors/class-connector-settings.php:238
 msgid "General"
 msgstr ""
 
@@ -409,9 +400,7 @@ msgid "Role Access"
 msgstr ""
 
 #: classes/class-settings.php:230
-msgid ""
-"Users from the selected roles above will have permission to view Stream "
-"Records. However, only site Administrators can access Stream Settings."
+msgid "Users from the selected roles above will have permission to view Stream Records. However, only site Administrators can access Stream Settings."
 msgstr ""
 
 #: classes/class-settings.php:236
@@ -435,9 +424,7 @@ msgid "Not recommended."
 msgstr ""
 
 #: classes/class-settings.php:250
-msgid ""
-"Purging old records helps to keep your WordPress installation running "
-"optimally."
+msgid "Purging old records helps to keep your WordPress installation running optimally."
 msgstr ""
 
 #: classes/class-settings.php:257
@@ -449,9 +436,7 @@ msgid "Exclude Rules"
 msgstr ""
 
 #: classes/class-settings.php:263
-msgid ""
-"Create rules to exclude certain kinds of activity from being recorded by "
-"Stream."
+msgid "Create rules to exclude certain kinds of activity from being recorded by Stream."
 msgstr ""
 
 #: classes/class-settings.php:270
@@ -463,10 +448,7 @@ msgid "Comment Flood Tracking"
 msgstr ""
 
 #: classes/class-settings.php:276
-msgid ""
-"WordPress will automatically prevent duplicate comments from flooding the "
-"database. By default, Stream does not track these attempts unless you opt-in "
-"here. Enabling this is not necessary or recommended for most sites."
+msgid "WordPress will automatically prevent duplicate comments from flooding the database. By default, Stream does not track these attempts unless you opt-in here. Enabling this is not necessary or recommended for most sites."
 msgstr ""
 
 #: classes/class-settings.php:282
@@ -482,10 +464,7 @@ msgid "Akismet Tracking"
 msgstr ""
 
 #: classes/class-settings.php:306
-msgid ""
-"Akismet already keeps statistics for comment attempts that it blocks as "
-"SPAM. By default, Stream does not track these attempts unless you opt-in "
-"here. Enabling this is not necessary or recommended for most sites."
+msgid "Akismet already keeps statistics for comment attempts that it blocks as SPAM. By default, Stream does not track these attempts unless you opt-in here. Enabling this is not necessary or recommended for most sites."
 msgstr ""
 
 #: classes/class-settings.php:318
@@ -493,10 +472,7 @@ msgid "WP Cron Tracking"
 msgstr ""
 
 #: classes/class-settings.php:320
-msgid ""
-"By default, Stream does not track activity performed by WordPress cron "
-"events unless you opt-in here. Enabling this is not necessary or recommended "
-"for most sites."
+msgid "By default, Stream does not track activity performed by WordPress cron events unless you opt-in here. Enabling this is not necessary or recommended for most sites."
 msgstr ""
 
 #: classes/class-settings.php:711
@@ -1388,9 +1364,7 @@ msgid "automatically marked as spam by Akismet"
 msgstr ""
 
 #: connectors/class-connector-comments.php:277
-msgctxt ""
-"1: Parent comment's author, 2: Comment author, 3: Post title, 4: Comment "
-"status, 5: Comment type"
+msgctxt "1: Parent comment's author, 2: Comment author, 3: Post title, 4: Comment status, 5: Comment type"
 msgid "Reply to %1$s's %5$s by %2$s on %3$s %4$s"
 msgstr ""
 
@@ -1430,8 +1404,7 @@ msgid "%1$s's %3$s on %2$s unmarked as spam"
 msgstr ""
 
 #: connectors/class-connector-comments.php:568
-msgctxt ""
-"Comment status transition. 1: Comment author, 2: Post title, 3: Comment type"
+msgctxt "Comment status transition. 1: Comment author, 2: Post title, 3: Comment type"
 msgid "%1$s's %3$s %2$s"
 msgstr ""
 
@@ -1912,16 +1885,12 @@ msgid "View Release Notes"
 msgstr ""
 
 #: connectors/class-connector-installer.php:165
-msgctxt ""
-"Plugin/theme installation. 1: Type (plugin/theme), 2: Plugin/theme name, 3: "
-"Plugin/theme version"
+msgctxt "Plugin/theme installation. 1: Type (plugin/theme), 2: Plugin/theme name, 3: Plugin/theme version"
 msgid "Installed %1$s: %2$s %3$s"
 msgstr ""
 
 #: connectors/class-connector-installer.php:174
-msgctxt ""
-"Plugin/theme update. 1: Type (plugin/theme), 2: Plugin/theme name, 3: Plugin/"
-"theme version"
+msgctxt "Plugin/theme update. 1: Type (plugin/theme), 2: Plugin/theme name, 3: Plugin/theme version"
 msgid "Updated %1$s: %2$s %3$s"
 msgstr ""
 
@@ -3729,9 +3698,7 @@ msgstr ""
 
 #: connectors/class-connector-wordpress-seo.php:428
 msgctxt "wordpress-seo"
-msgid ""
-"Strip the category base (usually <code>/category/</code>) from the category "
-"URL."
+msgid "Strip the category base (usually <code>/category/</code>) from the category URL."
 msgstr ""
 
 #: connectors/class-connector-wordpress-seo.php:429
@@ -3756,8 +3723,7 @@ msgstr ""
 
 #: connectors/class-connector-wordpress-seo.php:433
 msgctxt "wordpress-seo"
-msgid ""
-"Redirect ugly URL's to clean permalinks. (Not recommended in many cases!)"
+msgid "Redirect ugly URL's to clean permalinks. (Not recommended in many cases!)"
 msgstr ""
 
 #: connectors/class-connector-wordpress-seo.php:434
@@ -3772,8 +3738,7 @@ msgstr ""
 
 #: connectors/class-connector-wordpress-seo.php:436
 msgctxt "wordpress-seo"
-msgid ""
-"Prevent cleaning out Google Analytics Campaign & Google AdWords Parameters."
+msgid "Prevent cleaning out Google Analytics Campaign & Google AdWords Parameters."
 msgstr ""
 
 #: connectors/class-connector-wordpress-seo.php:437
@@ -3912,7 +3877,8 @@ msgctxt "wordpress-seo"
 msgid "Taxonomies"
 msgstr ""
 
-#: includes/feeds/atom.php:7 includes/feeds/rss-2.0.php:21
+#: includes/feeds/atom.php:7
+#: includes/feeds/rss-2.0.php:21
 msgid "Stream Feed"
 msgstr ""
 
@@ -3937,11 +3903,7 @@ msgid "https://wp-stream.com/"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid ""
-"Stream tracks logged-in user activity so you can monitor every change made "
-"on your WordPress site in beautifully organized detail. All activity is "
-"organized by context, action and IP address for easy filtering. Developers "
-"can extend Stream with custom connectors to log any kind of action."
+msgid "Stream tracks logged-in user activity so you can monitor every change made on your WordPress site in beautifully organized detail. All activity is organized by context, action and IP address for easy filtering. Developers can extend Stream with custom connectors to log any kind of action."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -3951,3 +3913,4 @@ msgstr ""
 #. Author URI of the plugin/theme
 msgid "https://xwp.co/"
 msgstr ""
+
