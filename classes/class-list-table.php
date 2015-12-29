@@ -463,6 +463,7 @@ class List_Table extends \WP_List_Table {
 				$all_records[ $user->id ] = $user->get_display_name();
 			}
 		} else {
+		/*$all_records verifica que existan Arrays para rellenar los filtros, este se encuentra en el archivo class-connectors.php*/	
 			$prefixed_column = sprintf( 'stream_%s', $column );
 			$all_records     = $this->plugin->connectors->term_labels[ $prefixed_column ];
 		}
@@ -534,6 +535,11 @@ class List_Table extends \WP_List_Table {
 			'items' => $this->assemble_records( 'action' ),
 		);
 
+        /*Filtro para las ip mostrado en la lis table*/
+		$filters['ip'] = array(
+			'title' => __( 'ip', 'stream' ),
+			'items' => $this->assemble_records( 'ip' ),
+		);
 		/**
 		 * Filter allows additional filters in the list table dropdowns
 		 * Note the format of the filters above, with they key and array
@@ -593,7 +599,6 @@ class List_Table extends \WP_List_Table {
 					// Ouput a hidden input to handle the connector value
 					$filters_string .= '<input type="hidden" name="connector" class="record-filter-connector" />';
 				}
-
 				$filters_string .= $this->filter_select( $name, $data['title'], $data['items'] );
 			}
 		}

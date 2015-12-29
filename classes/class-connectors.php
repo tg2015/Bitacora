@@ -28,10 +28,12 @@ class Connectors {
 	 *
 	 * @var array
 	 */
+    /*Array $term_labels que contiene los tipos de filtros usados en el archivo class-list-table.php*/	
 	public $term_labels = array(
 		'stream_connector' => array(),
 		'stream_context'   => array(),
 		'stream_action'    => array(),
+		'stream_ip'        => array(),
 	);
 
 	/**
