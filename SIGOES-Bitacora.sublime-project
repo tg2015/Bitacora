@@ -2,12 +2,12 @@
 	"folders":
 	[
 		{
-			"path": "/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora"
+			"path": "/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora"
 		}
 	],
 "settings": {
         "xdebug": {
-             "url": "http://localhost/wordpress/wp-admin/admin.php?page=wp_stream"
+             "url": "http://localhost/wordpress3/wp-admin/admin.php?page=wp_stream"
         }
     }
 }

@@ -386,4 +386,9 @@ class Connector_Posts extends Connector {
 
 		return $revision_id;
 	}
-}
+/*PARA FILTRO IP*/
+/*INICIO*/
+public function get_ip_labels() {
+		return array();
+	}/*FIN*/
+}/*FIN class*/

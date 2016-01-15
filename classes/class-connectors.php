@@ -179,6 +179,11 @@ class Connectors {
 				$this->term_labels['stream_context'],
 				$connector->get_context_labels()
 			);
+            /*Llena el filtro ip con los datos de los archivos de la carpeta connectors*/			
+			$this->term_labels['stream_ip'] = array_merge(
+				$this->term_labels['stream_ip'],
+				$connector->get_ip_labels()
+			);
 		}
 
 		$labels = $this->term_labels['stream_connector'];

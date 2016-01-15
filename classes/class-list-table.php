@@ -302,7 +302,6 @@ class List_Table extends \WP_List_Table {
 			case 'ip' :
 				$out = $this->column_link( $record->{$column_name}, 'ip', $record->{$column_name} );
 				break;
-
 			default :
 				/**
 				 * Registers new Columns to be inserted into the table.  The cell contents of this column is set
@@ -792,6 +791,7 @@ class List_Table extends \WP_List_Table {
         $connector = (isset($_GET['connector']))?$_GET['connector']:"";
         $action    = (isset($_GET['action']))?$_GET['action']:"";
         $search    = (isset($_GET['search']))?$_GET['search']:"";
+		$ip        = (isset($_GET['ip']))?$_GET['ip']:"";
 		echo '<p>	
 			<form method="post" action="admin.php?page=ReporteBitacora" target="_blank">
 			<input type="submit" class="button-primary" name="Exportar" value="Exportar" />
@@ -803,6 +803,7 @@ class List_Table extends \WP_List_Table {
 				<input name="connector" type="hidden" value="'.$connector.'">
 				<input name="action" 	type="hidden" value="'.$action.'">
                 <input name="search" 	type="hidden" value="'.$search.'">
+                <input name="ip" 	    type="hidden" value="'.$ip.'">
 			</form>
 			</p>';
 		echo '<form method="get" action="' . esc_url( $url ) . '" id="record-filter-form">';

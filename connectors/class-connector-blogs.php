@@ -74,7 +74,6 @@ class Connector_Blogs extends Connector {
 
 		return $labels;
 	}
-
 	/**
 	 * Add action links to Stream drop row in admin list screen
 	 *
@@ -361,4 +360,10 @@ class Connector_Blogs extends Connector {
 			$action
 		);
 	}
-}
+/*Para filtro IP*/
+/*INICIO*/
+public function get_ip_labels() {
+		return array();
+	}
+/*FIN*/
+}/*FIN class*/

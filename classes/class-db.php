@@ -38,7 +38,7 @@ class DB {
 	 *
 	 * @param Plugin $plugin The main Plugin class.
 	 */
-	public function __construct( $plugin ) {
+	public function __construct( $plugin = false ) {
 		$this->plugin = $plugin;
 		$this->query  = new Query( $this );
 

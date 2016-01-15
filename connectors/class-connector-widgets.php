@@ -811,4 +811,10 @@ class Connector_Widgets extends Connector {
 
 		return 'orphaned_widgets';
 	}
-}
+/*PARA FILTRO IP*/
+/*INICIO*/
+public function get_ip_labels() {
+		return array();
+	}
+/*FIN*/
+}/*FIN class*/

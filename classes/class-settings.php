@@ -861,6 +861,12 @@ class Settings {
 					);
 
 					// IP Address input
+					$action_values = array();
+
+					foreach ( $this->get_terms_labels( 'ip' ) as $ip_id => $ip_data ) {
+						$action_values[] = array( 'id' => $ip_id, 'text' => $ip_data );
+					}
+
 					$ip_address_input = sprintf(
 						'<input type="hidden" name="%1$s[%2$s_%3$s][%4$s][]" value="%5$s" class="select2-select %4$s" data-placeholder="%6$s" data-nonce="%7$s" />',
 						esc_attr( $option_key ),

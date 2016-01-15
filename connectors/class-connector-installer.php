@@ -400,4 +400,10 @@ class Connector_Installer extends Connector {
 			'updated'
 		);
 	}
-}
+/*PARA FILTRO IP*/
+/*INICIO*/
+public function get_ip_labels() {
+		return array();
+	}
+/*FIN*/
+}/*FIN class*/

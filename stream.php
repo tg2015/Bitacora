@@ -42,3 +42,5 @@ function wp_stream_fail_php_version() {
 function wp_stream_get_instance() {
 	return $GLOBALS['wp_stream'];
 }
+/*Variable para el directorio del plugin Bitácora*/
+define('SIGOES_BITACORA_DIR', plugin_dir_path(__FILE__));

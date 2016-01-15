@@ -97,7 +97,7 @@ abstract class Connector {
 
 		$data = apply_filters(
 			'wp_stream_log_data',
-			compact( 'connector', 'message', 'args', 'object_id', 'context', 'action', 'user_id' )
+			compact( 'connector', 'message', 'args', 'object_id', 'context', 'action', 'user_id','ip' )
 		);
 
 		if ( ! $data ) {
