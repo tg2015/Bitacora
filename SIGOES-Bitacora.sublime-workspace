@@ -3,73 +3,23 @@
 	{
 		"selected_items":
 		[
-			[
-				"j",
-				"jqxhr"
-			],
-			[
-				"post",
-				"post_ID"
-			],
-			[
-				"sp_hola_mun",
-				"sp_hola_mundo_border_color"
-			],
-			[
-				"IN",
-				"input	Tag"
-			],
-			[
-				"TD",
-				"td	Tag"
-			],
-			[
-				"in",
-				"input	Tag"
-			],
-			[
-				"f",
-				"form	Tag"
-			],
-			[
-				"LI",
-				"li	Tag"
-			],
-			[
-				"I",
-				"i	Tag"
-			],
-			[
-				"DI",
-				"div	Tag"
-			],
-			[
-				"php",
-				"php"
-			],
-			[
-				"print",
-				"printf"
-			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "Searching 193 files for \"Show filter controls via the screen options tab above.\" (case sensitive)\n\n/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-list-table.php:\n  542  		\n  543  		$filters_string  = sprintf( '<input type=\"hidden\" name=\"page\" value=\"%s\" />', 'wp_stream' );\n  544: 		$filters_string .= sprintf( '<span class=\"filter_info hidden\">%s</span>', esc_html__( 'Show filter controls via the screen options tab above.', 'stream' ) );\n  545  \n  546  		foreach ( $filters as $name => $data ) {\n\n/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/languages/stream-en_US.po:\n  332  \n  333  #: classes/class-list-table.php:545\n  334: msgid \"Show filter controls via the screen options tab above.\"\n  335  msgstr \"\"\n  336  \n\n2 matches across 2 files\n",
-			"settings":
-			{
-				"buffer_size": 774,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			}
-		},
-		{
 			"file": "classes/class-list-table.php",
 			"settings":
 			{
-				"buffer_size": 29043,
+				"buffer_size": 29518,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "connectors/class-connector-settings.php",
+			"settings":
+			{
+				"buffer_size": 25605,
 				"line_ending": "Unix"
 			}
 		},
@@ -78,7 +28,7 @@
 			"settings":
 			{
 				"buffer_size": 0,
-				"line_ending": "Unix",
+				"line_ending": "Windows",
 				"name": "Xdebug Context",
 				"read_only": true,
 				"scratch": true
@@ -89,7 +39,7 @@
 			"settings":
 			{
 				"buffer_size": 0,
-				"line_ending": "Unix",
+				"line_ending": "Windows",
 				"name": "Xdebug Watch",
 				"read_only": true,
 				"scratch": true
@@ -100,19 +50,19 @@
 			"settings":
 			{
 				"buffer_size": 0,
-				"line_ending": "Unix",
-				"name": "Xdebug Stack",
+				"line_ending": "Windows",
+				"name": "Xdebug Breakpoint",
 				"read_only": true,
 				"scratch": true
 			}
 		},
 		{
-			"contents": "=> /var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-query.php\n	|+| 158\n	|+| 159\n	|+| 160\n	|+| 164\n	|+| 165\n	|+| 166\n	|+| 170\n",
+			"contents": "",
 			"settings":
 			{
-				"buffer_size": 144,
-				"line_ending": "Unix",
-				"name": "Xdebug Breakpoint",
+				"buffer_size": 0,
+				"line_ending": "Windows",
+				"name": "Xdebug Stack",
 				"read_only": true,
 				"scratch": true
 			}
@@ -121,47 +71,27 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 372.0,
+		"height": 152.0,
 		"selected_items":
 		[
 			[
-				"Package Control: ins",
-				"Package Control: Install Package"
-			],
-			[
-				"Package Control: remo",
+				"Package Control: re",
 				"Package Control: Remove Package"
 			],
 			[
-				"Package Control: pac",
-				"Package Control: Install Package"
-			],
-			[
 				"Package Control: ",
-				"Package Control: List Packages"
-			],
-			[
-				"Package Control: li",
-				"Package Control: List Packages"
-			],
-			[
-				"Package Control: lis",
-				"Package Control: List Packages"
+				"Package Control: Remove Package"
 			],
 			[
 				"Package Control: i",
 				"Package Control: Install Package"
 			],
 			[
-				"Package Control: l",
-				"Package Control: List Packages"
-			],
-			[
-				"Package Control: a",
+				"Package Control:",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 539.0
+		"width": 311.0
 	},
 	"console":
 	{
@@ -178,134 +108,60 @@
 	},
 	"file_history":
 	[
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-query.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/SIGOES-Bitacora.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-list-table.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-install.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/SIGOES-readme.txt",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/Bitacora.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/ui/js/admin.js",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-admin.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/stream.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-date-interval.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/phpcs.ruleset.xml",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Bitacora/classes/class-filter-input.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/connectors/class-connector-users.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/classes/class-list-table.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/classes/class-query.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/Bitacora.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/reportesXML/reporteBitacora.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/lib/phpjasperxml/class/PHPJasperXML.inc.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/SIGOES-Comunicados.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/classes/class-admin.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/ui/js/admin.js",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/InstitucionController.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/ProyectoController.php",
-		"/home/gaboroja/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/stream.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/includes/lib/Carbon.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/includes/feeds/json.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/includes/feeds/rss-2.0.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/includes/feeds/atom.php",
-		"/var/www/ansp/wp-content/plugins/plugin-sigoes/controller/StreamingController.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/SoloUnaCategoria.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/index.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/view/ReporteView.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/ReporteController.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/includes/GenerarReportes.php",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/EventoController.php",
-		"/var/www/wordpress/wp-content/plugins/Bitacora/.gitignore",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/js/admin.js",
-		"/var/www/wordpress/wp-content/plugins/stream/Bitacora.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/timeago/locales/jquery.timeago.es.js",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-query.php",
-		"/var/www/wordpress/wp-content/plugins/stream/untitled.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/stream/SIGOES-Bitacora.sublime-project",
-		"/var/www/wordpress/wp-content/plugins/SIGOES-Comunicados/controller/OtrosController.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-date-interval.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-list-table.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-admin.php",
-		"/home/gaboroja/Documentos/Gabriel-Doc-Debian/BackUp de Wordpress/SIGOES-Comunicados-04-11-2015-Bitacora/controller/EventoController.php",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/stream-icons/style.css",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/stream-icons/datepicker-icons.png",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/stream-icons/datepicker-icons-gray.png",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/stream-icons/font/stream.eot",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-taxonomies.php",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/js/global.js",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/Xdebug Context",
-		"/var/www/wordpress/wp-includes/wp-db.php",
-		"/var/www/wordpress/wp-content/plugins/stream/includes/lib/Carbon.php",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/css/admin.css",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-filter-input.php",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_el.js",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_es.js",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/css/datepicker.css",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-admin.php",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2.js",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/timeago/jquery.timeago.js",
-		"/var/www/wordpress/wp-content/plugins/stream/stream.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-install.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-db.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-live-update.php",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2.jquery.json",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/js/wpseo-admin.js",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/js/live-updates.js",
-		"/var/www/wordpress/wp-content/plugins/stream/includes/feeds/json.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-connectors.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-connector.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-cli.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-author.php",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/timeago/locales/jquery.timeago.ar.js",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_da.js",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_ca.js",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2_locale_bg.js",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/select2-bootstrap.css",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/release.sh",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/package.json",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/bower.json",
-		"/var/www/wordpress/wp-content/plugins/stream/readme.txt",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/component.json",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/README.md",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/LICENSE",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/lib/select2/CONTRIBUTING.md",
-		"/var/www/wordpress/wp-content/plugins/stream/ui/js/settings.js",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-date-interval.php",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/testcase.php",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/bootstrap.php",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-plugin.php",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/connectors/test-class-connector-posts.php",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-filter-input.php",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-db.php",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-connectors.php",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-connector.php",
-		"/var/www/wordpress/wp-content/plugins/stream/tests/tests/test-class-author.php",
-		"/var/www/wordpress/wp-content/plugins/stream/languages/stream-en_US.po",
-		"/var/www/wordpress/wp-content/plugins/stream/languages/stream-en_US.mo",
-		"/var/www/wordpress/wp-content/plugins/stream/includes/functions.php",
-		"/var/www/wordpress/wp-content/plugins/stream/includes/db-updates.php",
-		"/var/www/wordpress/wp-content/plugins/stream/includes/feeds/rss-2.0.php",
-		"/var/www/wordpress/wp-content/plugins/stream/includes/feeds/atom.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-wordpress-seo.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-woocommerce.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-widgets.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-users.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-user-switching.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-settings.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-posts.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-menus.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-log.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-media.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-installer.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-gravityforms.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-editor.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-edd.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-comments.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-buddypress.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-blogs.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-bbpress.php",
-		"/var/www/wordpress/wp-content/plugins/stream/connectors/class-connector-acf.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-uninstall.php",
-		"/var/www/wordpress/wp-content/plugins/stream/classes/class-settings.php"
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/stream.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-db.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/SIGOES-readme.txt",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/readme.txt",
+		"/C/xampp/htdocs/wordpress3/wp-includes/pluggable.php",
+		"/C/xampp/htdocs/wordpress3/wp-includes/functions.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-connectors.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-settings.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-record.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-widgets.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-blogs.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-comments.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-editor.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-installer.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-media.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-menus.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-posts.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-taxonomies.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/connectors/class-connector-users.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-list-table.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-settings.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-date-interval.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/tests/tests/test-class-date-interval.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-query.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-cli.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/SIGOES-Bitacora.sublime-project",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-filter-input.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/ui/lib/select2/select2.js",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/tests/tests/test-class-admin.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-admin.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/languages/Bitacora_es_ES.po",
+		"/C/xampp/htdocs/wordpress3/wp-config.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/LICENSE",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/phpcs.ruleset.xml",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Comunicados/controller/EventoController.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Comunicados/SIGOES-Comunicados.sublime-project",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Comunicados/includes/reportesXML/reporteBitacora.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Comunicados/controller/BitacoraController.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Bitacora/classes/class-install.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Comunicados/controller/StreamingController.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Comunicados/controller/OtrosController.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Comunicados/controller/ReporteController.php",
+		"/C/xampp/htdocs/wordpress3/wp-content/plugins/SIGOES-Comunicados/controller/ProyectoController.php",
+		"/C/Users/glopez/AppData/Roaming/Sublime Text 2/Packages/User/bh_core.sublime-settings",
+		"/C/Users/glopez/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/xampp/htdocs/wordpress2/wp-content/plugins/SIGOES-Comunicados/controller/EventoController.php",
+		"/C/Users/glopez/AppData/Roaming/Sublime Text 2/Packages/BracketHighlighter/bh_core.sublime-settings",
+		"/C/Users/glopez/AppData/Roaming/Sublime Text 2/Packages/User/bh_wrapping.sublime-settings",
+		"/C/Users/glopez/AppData/Roaming/Sublime Text 2/Packages/User/bh_swapping.sublime-settings",
+		"/C/Users/glopez/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/xampp/htdocs/wordpress2/wp-content/plugins/SIGOES-Comunicados/view/ContactoAgregarView.php",
+		"/C/Users/glopez/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/C/Users/glopez/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/glopez/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings"
 	],
 	"find":
 	{
@@ -313,7 +169,7 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 90.0,
 		"where_history":
 		[
 			""
@@ -321,137 +177,61 @@
 	},
 	"find_state":
 	{
-		"case_sensitive": true,
+		"case_sensitive": false,
 		"find_history":
 		[
+			"display",
+			"existing_records",
+			"existing",
+			"existing records",
+			"get_context_labels",
+			"label",
+			"Carbon::",
+			"get_predefined_intervals",
+			"wp_stream_predefined",
+			"Fecha personalizada",
+			"existing_records",
+			"No matches found",
+			"callback",
+			"$.fn.select2.defaults",
+			"query",
+			"wp_stream",
+			"wp_stream_select2",
+			"select2",
+			"select2-container",
+			"select2-container chosen-select",
+			"Log In",
+			"Settings",
+			"dummy_stream_data",
+			"Activated",
+			"Enabled",
+			"No matches found",
+			"No match found",
+			"confirm_uninstall",
+			"uninstall",
+			"_e(",
+			"display",
+			"$filters",
 			"Show filter controls via the screen options tab above.",
-			"record-created",
-			"insert",
-			"record-created",
-			"get_date_from_gmt",
-			"record-created",
-			"3600",
-			"Fecha Personalizada",
-			"fecha personalizada",
-			"este",
-			"order",
-			"order by",
-			"Fecha",
-			"profile was updated",
-			"get_sortable_column",
-			"order",
-			"Order",
-			"Fecha",
-			"Contexto",
-			"Log de Usuario",
-			"Resetear",
-			"record-created",
-			"<time class=\"record-created\"",
-			"record-created",
-			"<time class=\"record-created",
-			"<time class=\"record-created\"",
-			"'d-m-Y'",
-			"'Y-m-d H:i:s'",
-			"inicio",
-			"main_page_title",
-			"context",
-			"filtro",
-			"$out",
-			"start",
-			"static",
-			"today",
-			"Carbon",
-			"Este día",
-			"dd/mm/yy",
-			"record-created",
-			"created",
-			"insert",
-			"new DateTime( 'now', $timezone = new DateTimeZone( 'UTC' ) )",
-			"UTC",
-			"fecha_ini",
-			"Admin-ajax.php",
-			"$date",
-			"get_gmt_from_date",
-			"$date",
-			"to",
-			"fecha",
-			"mata_HOYGAN",
-			"str_replace_once",
-			"stringrpos",
-			"string_at",
-			"spanish_metaphone",
-			"comparar_palabras",
-			"quitar_puntos",
-			"gSpell",
-			"fixmissingvowels",
-			"desporteniar",
-			"deshachear",
-			"desk",
-			"desestupidizar",
-			"desms",
-			"desmultiplicar",
-			"desalternar",
-			"deleet",
-			"dessimbolizar",
-			"es_numero_o_referencia",
-			"is_url",
-			"utf8tohtml",
-			"retornar_keywords_post",
-			"eliminar_lenguaje_grosero",
-			"corregir_ortografia",
-			"eliminar_lenguaje_grosero",
-			"corregir_ortografia",
-			"quitar_acentos",
-			"eliminar_lenguaje_grosero",
-			"cadena_sin_malas_palabras",
-			"desalternar",
-			"censuradas",
-			"MH_BADWORDS",
-			"eliminar_lenguaje_HOYGAN",
-			"//cadena",
-			"cadena",
-			"cadena_sin",
-			"fecha",
-			"hace",
-			"años",
-			"Hace",
-			"deszezear",
-			"fecha",
-			" ISO 8601",
-			"wp_stream_filter_input",
-			"$args",
-			"date_after",
-			"date_to",
-			"$date_to",
-			"$end",
-			"filter_date",
-			"filters_form",
-			"filtro",
-			"datepicker",
-			"jquery_datepicker",
-			"Y/m/d",
-			"jquery-ui-datepicker",
-			"yy",
-			"regional",
-			"wp_stream.locale",
-			"datepicker",
-			"jquery-ui-datepicker",
-			"wp-stream-datepicker",
-			"jquery-ui",
-			"wp-stream-datepicker",
-			"wp_enqueue_script",
-			"jquery-ui-datepicker",
-			"fecha",
-			"jQuery",
-			"jQuery)",
-			"Actividad",
-			"Ahora",
-			"Todo",
-			"Show",
-			"Show all users",
-			"All time",
-			"días",
-			"ahora"
+			"$table_name",
+			"$wpdb->base_prefix",
+			"wp_stream_db_tables_prefix",
+			"get_table_names",
+			"wp_stream_db_tables_prefix",
+			"get_table_names",
+			"the Stream plugin and activate it again.",
+			"create",
+			"$prefix",
+			"$prefix ",
+			"$prefix",
+			"get_table_names",
+			"base_prefix",
+			"wp_stream_db",
+			"uninstall",
+			"The following tables are not present in the WordPress database: ",
+			"Please uninstall ",
+			"Please uninstall the Stream plugin and activate it again.",
+			"{"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -460,47 +240,32 @@
 		"replace_history":
 		[
 		],
-		"reverse": true,
+		"reverse": false,
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": false
+		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "classes/class-list-table.php",
 					"settings":
 					{
-						"buffer_size": 774,
+						"buffer_size": 29518,
 						"regions":
 						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										391,
-										445
-									],
-									[
-										667,
-										721
-									]
-								],
-								"scope": ""
-							}
 						},
 						"selection":
 						[
 							[
-								390,
-								390
+								25479,
+								25479
 							]
 						],
 						"settings":
@@ -553,35 +318,29 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
-							"detect_indentation": false,
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([A-Za-z\\\\/<].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+							"syntax": "Packages/PHP/PHP.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 14250.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "classes/class-list-table.php",
+					"file": "connectors/class-connector-settings.php",
 					"settings":
 					{
-						"buffer_size": 29043,
+						"buffer_size": 25605,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								25605,
+								25605
 							]
 						],
 						"settings":
@@ -634,12 +393,11 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/PHP/PHP.tmLanguage",
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1168.0,
+						"translation.y": 13590.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -715,7 +473,6 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
 							"word_wrap": false
 						},
@@ -790,7 +547,6 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
 							"word_wrap": false
 						},
@@ -871,7 +627,6 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
 							"word_wrap": false
 						},
@@ -885,15 +640,15 @@
 					"buffer": 5,
 					"settings":
 					{
-						"buffer_size": 144,
+						"buffer_size": 0,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								144,
-								144
+								0,
+								0
 							]
 						],
 						"settings":
@@ -946,7 +701,6 @@
 								"bh_single_quote_open",
 								"bh_single_quote_close"
 							],
-							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
 							"syntax": "Packages/Xdebug Client/Xdebug.tmLanguage",
 							"word_wrap": false
 						},
@@ -965,7 +719,7 @@
 	},
 	"input":
 	{
-		"height": 104.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -1004,13 +758,9 @@
 		]
 	},
 	"menu_visible": true,
-	"output.unsaved_changes":
-	{
-		"height": 100.0
-	},
 	"output.xdebug":
 	{
-		"height": 98.0
+		"height": 118.0
 	},
 	"replace":
 	{
@@ -1037,6 +787,6 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 285.0,
+	"side_bar_width": 286.0,
 	"status_bar_visible": true
 }

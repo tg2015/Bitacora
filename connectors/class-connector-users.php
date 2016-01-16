@@ -360,4 +360,10 @@ class Connector_Users extends Connector {
 			$user->ID
 		);
 	}
-}
+/*PARA FILTRO IP*/
+/*INICIO*/
+public function get_ip_labels() {
+		return array();
+	}
+/*FIN*/
+}/*FIN class*/

@@ -230,4 +230,10 @@ class Connector_Media extends Connector {
 	public function callback_wp_save_image_file( $dummy, $filename, $image, $mime_type, $post_id ) {
 		return $this->callback_wp_save_image_editor_file( $dummy, $filename, $image, $mime_type, $post_id );
 	}
-}
+/*PARA FILTRO IP*/
+/*INICIO*/
+public function get_ip_labels() {
+		return array();
+	}
+/*FIN*/
+}/*FIN class*/

@@ -302,7 +302,6 @@ class List_Table extends \WP_List_Table {
 			case 'ip' :
 				$out = $this->column_link( $record->{$column_name}, 'ip', $record->{$column_name} );
 				break;
-
 			default :
 				/**
 				 * Registers new Columns to be inserted into the table.  The cell contents of this column is set
@@ -463,6 +462,7 @@ class List_Table extends \WP_List_Table {
 				$all_records[ $user->id ] = $user->get_display_name();
 			}
 		} else {
+		/*$all_records verifica que existan Arrays para rellenar los filtros, este se encuentra en el archivo class-connectors.php*/	
 			$prefixed_column = sprintf( 'stream_%s', $column );
 			$all_records     = $this->plugin->connectors->term_labels[ $prefixed_column ];
 		}
@@ -534,6 +534,11 @@ class List_Table extends \WP_List_Table {
 			'items' => $this->assemble_records( 'action' ),
 		);
 
+        /*Filtro para las ip mostrado en la lis table*/
+		$filters['ip'] = array(
+			'title' => __( 'ip', 'stream' ),
+			'items' => $this->assemble_records( 'ip' ),
+		);
 		/**
 		 * Filter allows additional filters in the list table dropdowns
 		 * Note the format of the filters above, with they key and array
@@ -593,7 +598,6 @@ class List_Table extends \WP_List_Table {
 					// Ouput a hidden input to handle the connector value
 					$filters_string .= '<input type="hidden" name="connector" class="record-filter-connector" />';
 				}
-
 				$filters_string .= $this->filter_select( $name, $data['title'], $data['items'] );
 			}
 		}
@@ -787,6 +791,7 @@ class List_Table extends \WP_List_Table {
         $connector = (isset($_GET['connector']))?$_GET['connector']:"";
         $action    = (isset($_GET['action']))?$_GET['action']:"";
         $search    = (isset($_GET['search']))?$_GET['search']:"";
+		$ip        = (isset($_GET['ip']))?$_GET['ip']:"";
 		echo '<p>	
 			<form method="post" action="admin.php?page=ReporteBitacora" target="_blank">
 			<input type="submit" class="button-primary" name="Exportar" value="Exportar" />
@@ -798,6 +803,7 @@ class List_Table extends \WP_List_Table {
 				<input name="connector" type="hidden" value="'.$connector.'">
 				<input name="action" 	type="hidden" value="'.$action.'">
                 <input name="search" 	type="hidden" value="'.$search.'">
+                <input name="ip" 	    type="hidden" value="'.$ip.'">
 			</form>
 			</p>';
 		echo '<form method="get" action="' . esc_url( $url ) . '" id="record-filter-form">';

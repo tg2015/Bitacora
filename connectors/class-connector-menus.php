@@ -229,4 +229,10 @@ class Connector_Menus extends Connector {
 			);
 		}
 	}
-}
+/*PARA FILTRO IP*/
+/*INICIO*/
+public function get_ip_labels() {
+		return array();
+	}
+/*FIN*/
+}/*FIN class*/

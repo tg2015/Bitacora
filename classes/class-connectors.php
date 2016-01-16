@@ -28,10 +28,12 @@ class Connectors {
 	 *
 	 * @var array
 	 */
+    /*Array $term_labels que contiene los tipos de filtros usados en el archivo class-list-table.php*/	
 	public $term_labels = array(
 		'stream_connector' => array(),
 		'stream_context'   => array(),
 		'stream_action'    => array(),
+		'stream_ip'        => array(),
 	);
 
 	/**
@@ -176,6 +178,11 @@ class Connectors {
 			$this->term_labels['stream_context'] = array_merge(
 				$this->term_labels['stream_context'],
 				$connector->get_context_labels()
+			);
+            /*Llena el filtro ip con los datos de los archivos de la carpeta connectors*/			
+			$this->term_labels['stream_ip'] = array_merge(
+				$this->term_labels['stream_ip'],
+				$connector->get_ip_labels()
 			);
 		}
 

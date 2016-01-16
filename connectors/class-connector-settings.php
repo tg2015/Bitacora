@@ -259,7 +259,6 @@ class Connector_Settings extends Connector {
 
 		return $context_labels;
 	}
-
 	/**
 	 * Return context by option name and key
 	 *
@@ -762,4 +761,13 @@ class Connector_Settings extends Connector {
 		</script>
 		<?php
 	}
-}
+/*PARA FILTRO IP*/
+/*INICIO*/	
+public function get_ip_labels() {
+	require_once(SIGOES_BITACORA_DIR.'/classes/class-db.php');
+  	$model = new  DB(); 
+  	$ips_records = $model->existing_records('ip');		
+	return $ips_records;
+	}
+/*FIN*/
+}/*FIN class*/

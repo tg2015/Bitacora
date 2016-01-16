@@ -88,3 +88,12 @@ Linea:156
 Descripcion:
 Filtros de fecha para los WHERE de la consulta hecha a la class-db.php
 /*==============FIN=================*/
+
+/*=============INICIO===============*/
+Archivo:class-connector-settings.php
+Nota: todo esta en la function get_ip_labels
+Linea:766
+Descripcion:
+Filtro de IP solicitado por CAPRES, obtiene todas las ip registradas en la BD
+Ubicacion de archivo: SIGOES-Bitacora/connectors/class-connector-settings.php
+/*==============FIN=================*/
