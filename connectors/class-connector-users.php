@@ -58,6 +58,8 @@ class Connector_Users extends Connector {
 			'switched-to'     => esc_html__( 'Switched To', 'stream' ),
 			'switched-back'   => esc_html__( 'Switched Back', 'stream' ),
 			'switched-off'    => esc_html__( 'Switched Off', 'stream' ),
+			'bloqueado'       => esc_html__( 'bloqueado' ),
+			'desbloqueado'       => esc_html__( 'desbloqueado' ),
 		);
 	}
 
